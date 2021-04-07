@@ -72,32 +72,6 @@
   height: auto;
   overflow: hidden;
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: -1;
-    height: 50vmin;
-    width: 50vmin;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-
-  &[data-swiper-slide-index="0"]::after {
-    background-image: url(../img/key.png);
-  }
-
-  &[data-swiper-slide-index="1"]::after {
-    background-image: url(../img/rabbit.png);
-  }
-
-  &[data-swiper-slide-index="2"]::after {
-    background-image: url(../img/unicorns.png);
-  }
-
   @media (min-width: $stop-scaling) {
     padding: 157px 0 93px;
   }

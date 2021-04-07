@@ -11,15 +11,6 @@
     pointer-events: none;
   }
 
-  &--intro,
-  &--slogan,
-  &--features {
-    background: url(../img/hat.png);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-
   &--intro {
     .screen__wrapper {
       justify-content: flex-end;
@@ -42,29 +33,6 @@
   }
 
   &--show {
-    &::after {
-      content: '';
-      position: absolute;
-      height: 120vmin;
-      width: 120vmin;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      background-image: url(../img/ball2.png),
-        url(../img/ball1.png),
-        url(../img/whale.png),
-        url(../img/cloudLeft.png),
-        url(../img/cloudRight.png);
-      background-size: 10%, 15%, 50%, 40%, 40%;
-      background-position:
-        40% 38%,
-        36% 40%,
-        50% 50%,
-        15% 60%,
-        70% 40%;
-      background-repeat: no-repeat;
-    }
-
     .screen__wrapper {
       justify-content: flex-start;
       align-items: flex-start;

@@ -2,6 +2,8 @@ import 'picturefill/dist/picturefill.min';
 
 import {Menu, Slider, ModalTriggers, TicketsSlider, Scrollers} from './modules/page-parts';
 import FullPageScroll  from './modules/full-page-scroll';
+import Poster          from './modules/poster-canvas-animation';
+import WhaleScene      from './modules/whale-canvas-animation';
 import AnimatedCart    from './modules/animated-cart';
 
 
@@ -13,7 +15,18 @@ class App {
     this.ticketsSlider = new TicketsSlider();
     this.scrollers     = new Scrollers();
 
+    this.poster = new Poster({
+      canvas:   `#poster-canvas`,
+      bgCanvas: `#poster-bg-canvas`
+    });
+
+    this.poster.drawBg();
+
     this.fullPageScroll = new FullPageScroll(this);
+
+    this.whaleScene = new WhaleScene({
+      canvas: `#whale-canvas`
+    });
 
     this.cart = new AnimatedCart({
       cart:             `.page-header__cart`,
@@ -22,6 +35,20 @@ class App {
       ticket:           `.tickets-form__ticket`,
       form:             `.tickets-block__form`,
       number:           `.page-header__cart-number`
+    });
+
+    this.initEventListeners();
+  }
+
+
+  initEventListeners() {
+    window.addEventListener(`resize`, () => {
+      this.poster.updateSize();
+      this.whaleScene.updateSceneSizing();
+
+      this.poster.drawBg();
+      this.poster.draw();
+      this.whaleScene.drawScene();
     });
   }
 }
