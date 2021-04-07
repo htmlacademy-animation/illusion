@@ -1,6 +1,20 @@
+.whiff {
+  stroke-dasharray: 33% 20% 33% 34%;
+  stroke-dashoffset: -33%;
+}
+
+
 .screen--hidden,
 .screen--deactivated {
   .whiff {
     opacity: 0;
   }
 }
+
+
+.screen--deactivated {
+  .whiff {
+    stroke-dashoffset: 50%;
+  }
+}
+

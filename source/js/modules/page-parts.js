@@ -297,9 +297,91 @@ class TicketsSlider {
 }
 
 
+class Scrollers {
+  constructor() {
+    this.map = document.getElementById(`map`);
+    this.scrollers = document.querySelectorAll(`.js-map-scroller`);
+
+    this.reverseNames = {
+      touchstart: `touchend`,
+      mousedown: `mouseup`
+    };
+
+    const scrollDeltaX = this.map.scrollWidth - this.map.clientWidth;
+    this.map.scrollLeft = scrollDeltaX / 10;
+
+    const scrollDeltaY = this.map.scrollHeight - this.map.clientHeight;
+
+    if (scrollDeltaY > 0) {
+      document.querySelector(`.screen__scroller--up`).classList.remove(`screen__scroller--hidden`);
+      document.querySelector(`.screen__scroller--down`).classList.remove(`screen__scroller--hidden`);
+
+      this.map.scrollTop = scrollDeltaY / 10;
+    }
+
+    this.initEventListeners();
+  }
+
+  initEventListeners() {
+    for (let i = 0; i < this.scrollers.length; i++) {
+      `touchstart,mousedown`.split(`,`).forEach((name) => {
+        this.scrollers[i].addEventListener(name, (evt) => {
+          let time = +new Date();
+          let mouseDowned = true;
+          let upFn;
+
+          window.addEventListener(this.reverseNames[name], upFn = () => {
+            window.removeEventListener(this.reverseNames[name], upFn);
+            mouseDowned = false;
+          });
+
+          const direction = evt.currentTarget.getAttribute('data-direction');
+
+          const ticker = () => {
+            const currentTime = +new Date();
+            let dt = (currentTime - time) / 1000;
+            time = currentTime;
+
+            if (dt > 0.5) {
+              dt = 0.5;
+            }
+
+            switch (direction) {
+              case 'up': {
+                this.map.scrollTop -= dt * 300;
+                break;
+              }
+              case 'down': {
+                this.map.scrollTop += dt * 300;
+                break;
+              }
+              case 'left': {
+                this.map.scrollLeft -= dt * 300;
+                break;
+              }
+              case 'right': {
+                this.map.scrollLeft += dt * 300;
+                break;
+              }
+            }
+
+            if (mouseDowned) {
+              requestAnimationFrame(ticker);
+            }
+          };
+
+          ticker();
+        });
+      });
+    }
+  }
+}
+
+
 export {
   Menu,
   Slider,
   ModalTriggers,
   TicketsSlider,
+  Scrollers
 };

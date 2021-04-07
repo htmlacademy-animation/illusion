@@ -1,34 +1,536 @@
-<svg width="178" height="82" viewBox="0 0 178 82" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M114.442 57.4037C88.6278 40.7777 62.8139 74.5973 37 57.9627C37 52.2172 37 46.4716 37 40.7175C62.8139 57.3434 88.6278 23.5324 114.442 40.1584C114.442 45.9126 114.442 51.6581 114.442 57.4037Z" fill="#353535" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
-  <path d="M48.135 49.6025C48.5099 49.6627 48.8932 49.7144 49.2681 49.766C49.3618 50.1874 49.5748 51.0733 49.8985 52.4151C50.12 53.3182 50.333 54.2299 50.5545 55.1503C50.776 56.0706 50.9209 56.7587 51.0061 57.2231C51.0401 57.2231 51.0657 57.2231 51.0998 57.2317C51.6535 54.832 52.2073 52.4237 52.7696 49.9982C53.0763 49.9982 53.3745 49.9982 53.6812 49.9982C54.2349 52.4151 54.7887 54.8234 55.351 57.2231C55.3765 57.2231 55.4021 57.2231 55.4362 57.2145C55.5128 56.8017 55.6492 56.1824 55.8366 55.3567C56.0325 54.531 56.2285 53.7053 56.4329 52.871C56.8419 51.1851 57.0889 50.153 57.1656 49.7746C57.5405 49.7316 57.9238 49.6886 58.2987 49.6369C58.0772 50.4799 57.6768 52.1485 57.0804 54.6256C56.7822 55.9072 56.5352 56.9393 56.3307 57.7306C55.7599 57.7822 55.1891 57.8166 54.6268 57.8424C54.0645 55.6061 53.6556 53.7913 53.383 52.4151C53.3489 52.2345 53.3063 52.0539 53.2722 51.8818C53.2467 51.8818 53.2211 51.8818 53.187 51.8818C53.1444 52.0883 53.1018 52.2861 53.0678 52.4925C52.9144 53.2236 52.7611 53.9547 52.5907 54.703C52.4203 55.4427 52.1647 56.5006 51.8154 57.8596C51.2446 57.8338 50.6738 57.7994 50.0945 57.7478C49.643 55.6577 48.987 52.957 48.135 49.6025Z" fill="white"/>
-  <path d="M59.3382 53.4299C59.3382 51.8129 59.3212 50.4969 59.2871 49.482C61.1358 49.1895 62.9845 48.7939 64.8418 48.3208C64.8418 48.596 64.8418 48.8799 64.8418 49.1551C63.3594 49.5336 61.8685 49.869 60.3861 50.1356C60.3861 51.0302 60.3861 51.9333 60.3861 52.8278C61.7833 52.5698 63.172 52.2515 64.5692 51.8903C64.5692 52.1655 64.5692 52.4407 64.5692 52.716C63.172 53.06 61.7833 53.3525 60.3861 53.5933C60.3861 54.505 60.3861 55.4253 60.3861 56.337C61.8941 56.0618 63.402 55.7264 64.9185 55.3393C64.9185 55.6145 64.9185 55.8984 64.9185 56.1736C63.0442 56.6553 61.1699 57.0595 59.2956 57.352C59.3212 56.3542 59.3382 55.0469 59.3382 53.4299Z" fill="white"/>
-  <path d="M66.3496 54.4706C66.3666 53.3009 66.3666 52.4236 66.3666 51.8559C66.3666 51.2968 66.3581 50.4281 66.3496 49.2497C66.3496 48.8111 66.3411 48.3638 66.3411 47.9252C66.7159 47.822 67.0823 47.7187 67.4571 47.6069C67.4401 48.9229 67.423 50.1959 67.423 51.443C67.423 52.5698 67.4316 53.6277 67.4571 54.6168C67.9768 54.4706 68.7435 54.2384 69.7659 53.903C70.4219 53.6879 70.9075 53.5245 71.2142 53.4213C71.1971 53.7309 71.1716 54.0406 71.1546 54.3502C69.5529 54.8663 67.9427 55.3565 66.3411 55.7952C66.3411 55.3565 66.3496 54.9179 66.3496 54.4706Z" fill="white"/>
-  <path d="M72.0747 53.1462C71.4783 52.6473 71.1716 51.7356 71.1716 50.411C71.1716 49.095 71.4698 48.0027 72.0747 47.1082C72.6796 46.2223 73.5486 45.5858 74.6987 45.2073C75.6784 44.8805 76.4452 44.8719 76.9904 45.1815C77.5357 45.4912 77.885 46.0932 78.0298 46.9878C77.672 47.1512 77.3227 47.3146 76.9649 47.478C76.8285 46.7899 76.5644 46.3255 76.164 46.0932C75.7721 45.861 75.2354 45.8524 74.5709 46.076C73.9745 46.2739 73.4804 46.5835 73.08 47.0136C72.5262 47.8823 72.2536 48.923 72.2536 50.1444C72.2536 51.1679 72.4751 51.8818 72.9181 52.2774C73.3611 52.6731 73.9916 52.7333 74.8094 52.4667C75.3632 52.286 75.8147 52.0194 76.1725 51.6668C76.4963 51.2367 76.7348 50.6776 76.8967 49.9895C77.2545 49.8691 77.6123 49.7487 77.9701 49.6369C77.7998 50.54 77.4419 51.3055 76.9052 51.9334C76.3685 52.5613 75.6273 53.0257 74.6987 53.3354C73.5486 53.7138 72.6796 53.645 72.0747 53.1462Z" fill="white"/>
-  <path d="M79.9211 50.566C79.3162 50.0671 79.0181 49.1554 79.0181 47.8308C79.0181 46.5149 79.3248 45.4139 79.9296 44.528C80.5345 43.6421 81.412 43.0142 82.5451 42.6702C83.6867 42.3261 84.5642 42.4207 85.1691 42.954C85.774 43.4873 86.0807 44.4162 86.0807 45.7322C86.0807 47.0481 85.774 48.1319 85.1691 48.9834C84.5642 49.8435 83.6952 50.437 82.5622 50.7724C81.4035 51.1337 80.526 51.0648 79.9211 50.566ZM84.0275 49.1726C84.675 48.3297 84.9987 47.289 84.9987 46.0418C84.9987 45.0269 84.7772 44.2958 84.3427 43.8485C83.9082 43.4012 83.3033 43.2894 82.5196 43.5217C81.8721 43.7195 81.3439 44.0291 80.9349 44.4592C80.3727 45.2849 80.083 46.2912 80.083 47.461C80.083 48.1319 80.1852 48.6909 80.3812 49.1124C80.5856 49.5424 80.8753 49.8263 81.2502 49.9725C81.625 50.1187 82.0765 50.1101 82.5877 49.9553C83.1841 49.7661 83.6612 49.508 84.0275 49.1726Z" fill="white"/>
-  <path d="M87.5714 44.674C87.5714 44.1235 87.5629 43.3236 87.5543 42.2657C87.5543 41.9818 87.5458 41.6894 87.5458 41.4056C88.0996 41.2679 88.6534 41.1475 89.1986 41.0271C90.0079 43.0914 90.8173 45.1728 91.6352 47.2715C91.6607 47.2629 91.6863 47.2629 91.7204 47.2543C92.5212 44.8804 93.3305 42.5323 94.1313 40.21C94.6851 40.1498 95.2389 40.0982 95.7841 40.0552C95.7671 41.5174 95.7671 42.6097 95.7671 43.3408C95.7671 44.9148 95.7841 46.4458 95.8267 47.9252C95.4859 47.951 95.1452 47.9768 94.8044 48.0112C94.8129 47.2199 94.8129 45.9813 94.8129 44.2955C94.8129 43.5472 94.8044 42.5065 94.7959 41.1733C94.7618 41.1733 94.7277 41.1819 94.6936 41.1819C93.8587 43.5472 93.0323 45.9297 92.1974 48.3467C91.8481 48.3983 91.4988 48.4585 91.1581 48.5187C90.3232 46.3856 89.4797 44.2697 88.6448 42.1711C88.6193 42.1797 88.5937 42.1797 88.5596 42.1883C88.5596 42.5065 88.5511 42.8333 88.5511 43.1516C88.5341 44.1321 88.5341 44.8632 88.5341 45.3449C88.5341 46.1792 88.5341 47.0135 88.5341 47.8564C88.5341 48.252 88.5341 48.6563 88.5341 49.0519C88.1933 49.1294 87.861 49.2068 87.5203 49.2928C87.5543 47.2801 87.5714 45.7405 87.5714 44.674Z" fill="white"/>
-  <path d="M97.7352 43.9171C97.7352 42.3001 97.7182 40.9841 97.6841 39.9606C99.5328 39.9262 101.382 40.038 103.239 40.339C103.239 40.6143 103.239 40.8981 103.239 41.1734C101.756 40.9325 100.265 40.8121 98.7831 40.7949C98.7831 41.6894 98.7831 42.5925 98.7831 43.4871C100.18 43.4957 101.569 43.5903 102.966 43.7881C102.966 44.0633 102.966 44.3386 102.966 44.6138C101.569 44.3902 100.18 44.2784 98.7831 44.2439C98.7831 45.1557 98.7831 46.076 98.7831 46.9877C100.291 47.0049 101.799 47.1339 103.315 47.3748C103.315 47.65 103.315 47.9338 103.315 48.2091C101.441 47.8994 99.5669 47.7876 97.6926 47.822C97.7182 46.8415 97.7352 45.5341 97.7352 43.9171Z" fill="white"/>
-  <path d="M114.442 49.0693H127.425" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
-  <path d="M159.297 57.9629H173.899C175.611 57.9629 177 56.5609 177 54.8321C177 52.527 167.824 48.4673 165.371 48.364L162.968 48.2608H134.3L131.958 42.1196H127.425V48.2608V50.1789C127.425 51.7443 128.414 53.1291 129.879 53.6279C134.19 55.0987 140.264 57.9543 144.967 57.9543H149.397" fill="#353535"/>
-  <path d="M159.297 57.9629H173.899C175.611 57.9629 177 56.5609 177 54.8321C177 52.527 167.824 48.4673 165.371 48.364L162.968 48.2608H134.3L131.958 42.1196H127.425V48.2608V50.1789C127.425 51.7443 128.414 53.1291 129.879 53.6279C134.19 55.0987 140.264 57.9543 144.967 57.9543H149.397" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
-  <path d="M145.546 72.3525H142.326L151.339 54.0063H162.415L149.482 70.4345C148.528 71.6472 147.08 72.3525 145.546 72.3525Z" fill="#353535" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
-  <path d="M159.714 48.2694L149.482 35.5225C148.528 34.3356 147.097 33.6475 145.58 33.6475H142.334L149.516 48.2694" fill="#353535"/>
-  <path d="M159.714 48.2694L149.482 35.5225C148.528 34.3356 147.097 33.6475 145.58 33.6475H142.334L149.516 48.2694" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
-  <path d="M143.612 36.2622H141.056V39.8575H145.376L143.612 36.2622Z" fill="#353535" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
-  <path d="M143.084 70.7095H140.528V67.1143H144.847L143.084 70.7095Z" fill="#353535" stroke="white" stroke-miterlimit="10" stroke-linejoin="round"/>
-  <line x1="139" y1="68.5" x2="125" y2="68.5" stroke="white"/>
-  <line x1="115" y1="68.5" x2="107" y2="68.5" stroke="white"/>
-  <line x1="31" y1="73.5" x2="28" y2="73.5" stroke="white"/>
-  <line x1="19" y1="39.5" x2="16" y2="39.5" stroke="white"/>
-  <line x1="83" y1="4.5" x2="80" y2="4.5" stroke="white"/>
-  <line x1="99" y1="68.5" x2="97" y2="68.5" stroke="white"/>
-  <line x1="139" y1="38.5" x2="121" y2="38.5" stroke="white"/>
-  <path d="M79.5012 15.501L72.5013 22.5009" stroke="white" stroke-miterlimit="10"/>
-  <path d="M79.4987 22.5009L72.4988 15.501" stroke="white" stroke-miterlimit="10"/>
-  <path d="M10.5012 34.501L3.50127 41.5009" stroke="white" stroke-miterlimit="10"/>
-  <path d="M10.4987 41.5009L3.49878 34.501" stroke="white" stroke-miterlimit="10"/>
-  <path d="M42.0007 76.001L38.0007 80.001" stroke="white" stroke-miterlimit="10"/>
-  <path d="M41.9993 80.001L37.9993 76.001" stroke="white" stroke-miterlimit="10"/>
-  <path d="M92.0007 2.00098L88.0007 6.00103" stroke="white" stroke-miterlimit="10"/>
-  <path d="M91.9993 6.00103L87.9993 2.00098" stroke="white" stroke-miterlimit="10"/>
-</svg>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="200 0 1280 300" preserveAspectRatio="xMinYMin meet">
+  <defs>
+    <path id="trajectory" fill="none" stroke="#FFFFFF" d="M-50,59.9c130.8-42,462.6,96.8,683.8,96.8c367.2,0,701.4-78.2,992.3-78.2"/>
+    <g id="star1">
+      <path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M-3.5,-3.5l-7,7"/>
+		  <path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M-3.5,3.5l-7-7"/>
+    </g>
+    <g id="star2">
+      <path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M-2,-2l-4,4"/>
+		  <path fill="none" stroke="#FFFFFF" stroke-miterlimit="10" d="M-2,2l-4-4"/>
+    </g>
+  </defs>
+  <g id="stars">
+    <g id="starsTailLeading">
+      <g id="s1Jumping">
+        <animateTransform attributeName="transform"
+                type="translate"
+                repeatCount="indefinite"
+                dur="20s"
+                additive="sum"
+                calcMode="discrete"
+                values="0 0; 
+                  250 70; 350 76; 460 107; 550 116; 620 139; 715 148; 795 153; 
+                  868 127; 930 122; 1034 134; 1092 132; 1155 121; 1255 102; 
+                  0 0; 
+                  0 0"
+                keyTimes="0; 
+                  0.15; 0.2; 0.25; 0.3; 0.35; 0.4; 0.45;
+                  0.5; 0.55; 0.6; 0.65; 0.7; 0.75; 
+                  0.8;
+                  1"/>
+        <g id="s1Blinking">
+          <animate attributeType="CSS"
+                attributeName="opacity"
+                calcMode="discrete"
+                values="0; 1; 0; 0"
+                keyTimes="0; 0.01; 0.5; 1"
+                dur="1s"
+                repeatCount="indefinite"/>
+          <use xlink:href="#star1"/>
+        </g>
+        <g id="s1add1Blinking">
+          <animateTransform attributeName="transform"
+                type="translate"
+                repeatCount="indefinite"
+                dur="20s"
+                additive="sum"
+                calcMode="discrete"
+                values="0 0; 
+                  25 -7; 28 12; 25 -7; 28 12; 25 -27; 28 12; 25 -7; 
+                  28 12; 25 -7; 28 12; 25 -7; 28 12; 25 17;
+                  0 0; 
+                  0 0"
+                keyTimes="0; 
+                  0.15; 0.2; 0.25; 0.3; 0.35; 0.4; 0.45;
+                  0.5; 0.55; 0.6; 0.65; 0.7; 0.75; 
+                  0.8;
+                  1"/>
+          <animate attributeType="CSS"
+                attributeName="opacity"
+                calcMode="discrete"
+                values="0; 1; 0; 0"
+                keyTimes="0; 0.4; 0.8; 1"
+                dur="0.65s"
+                repeatCount="indefinite"/>
+          <use xlink:href="#star2"/>
+        </g>
+      </g>
+      <g id="s2Jumping" transform="translate(0, 0)">
+        <animateTransform attributeName="transform"
+                type="translate"
+                repeatCount="indefinite"
+                dur="20s"
+                additive="sum"
+                calcMode="discrete"
+                values="0 0; 
+                  278 97; 390 114; 490 124; 592 122; 655 131; 755 142; 
+                  855 120; 900 154; 970 164; 1050 106; 1120 89; 1195 78; 1295 73; 
+                  0 0; 
+                  0 0"
+                keyTimes="0; 
+                  0.165; 0.215; 0.265; 0.315; 0.365; 0.415; 
+                  0.465; 0.515; 0.565; 0.615; 0.665; 0.715; 0.765;
+                  0.815;
+                  1"/>
+        <g id="s2Blinking">
+          <animate attributeType="CSS"
+                attributeName="opacity"
+                calcMode="discrete"
+                values="0; 1; 0; 0"
+                keyTimes="0; 0.01; 0.5; 1"
+                dur="1s"
+                begin="3.35s"
+                repeatCount="indefinite"/>
+          <use xlink:href="#star1"/>
+          <g class="smallLine">
+            <line x1="-10" y1="-2" x2="-20" y2="-2" stroke-dasharray="3 12" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" />
+            <animate  dur="1s" 
+                  repeatCount="indefinite"
+                  calcMode="linear"
+                  attributeName="stroke-dashoffset" 
+                  values="3.5; -15" 
+                  keyTimes="0; 1"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g id="starsPart1">
+      <g id="s1p1Jumping" transform="translate(120, 10)">
+        <animateTransform attributeName="transform"
+                type="translate"
+                repeatCount="indefinite"
+                dur="20s"
+                additive="sum"
+                calcMode="discrete"
+                values="0 0; 
+                  250 70; 320 76; 460 102; 580 113; 600 112; 715 104; 775 103; 
+                  868 77; 930 82; 1034 74; 1092 72; 1155 68; 1255 53; 
+                  1312 93; 0 0;
+                  0 0"
+                keyTimes="0; 
+                  0.15; 0.2; 0.25; 0.3; 0.35; 0.4; 0.45;
+                  0.5; 0.55; 0.6; 0.65; 0.7; 0.75; 
+                  0.8; 0.85;
+                  1"/>
+        <g id="s1p1Blinking">
+          <animate attributeType="CSS"
+                attributeName="opacity"
+                calcMode="discrete"
+                values="0; 1; 0; 0"
+                keyTimes="0; 0.01; 0.5; 1"
+                dur="1s"
+                begin="0.25s"
+                repeatCount="indefinite"/>
+          <use xlink:href="#star1"/>
+          <g class="smallLine">
+            <line x1="-15" y1="2" x2="-25" y2="2" stroke-dasharray="3 12" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" />
+            <animate  dur="1s" 
+                  begin="0.25s"
+                  repeatCount="indefinite"
+                  calcMode="linear"
+                  attributeName="stroke-dashoffset" 
+                  values="3.5; -15" 
+                  keyTimes="0; 1"/>
+          </g>
+        </g>
+        <g id="s1p1add1Blinking">
+          <animateTransform attributeName="transform"
+                type="translate"
+                repeatCount="indefinite"
+                dur="20s"
+                additive="sum"
+                calcMode="discrete"
+                values="0 0; 
+                  25 7; 28 -12; 25 7; 25 27; 28 -12; 20 -17; 25 7; 
+                  28 -12; 25 7; 28 -12; 15 -7; 20 7; 28 -4;
+                  28 12; 0 0; 
+                  0 0"
+                keyTimes="0; 
+                  0.15; 0.2; 0.25; 0.3; 0.35; 0.4; 0.45;
+                  0.5; 0.55; 0.6; 0.65; 0.7; 0.75; 
+                  0.8; 0.85;
+                  1"/>
+          <animate attributeType="CSS"
+                attributeName="opacity"
+                calcMode="discrete"
+                values="0; 1; 0; 0"
+                keyTimes="0; 0.25; 0.65; 1"
+                dur="1s"
+                begin="0.25s"
+                repeatCount="indefinite"/>
+          <use xlink:href="#star2"/>
+        </g>
+      </g>
+      <g id="s2p1Jumping" transform="translate(90, 50)">
+        <animateTransform attributeName="transform"
+                type="translate"
+                repeatCount="indefinite"
+                dur="20s"
+                additive="sum"
+                calcMode="discrete"
+                values="0 0; 
+                  278 97; 390 114; 490 124; 592 122; 655 131; 755 122; 
+                  855 110; 900 114; 970 104; 1050 96; 1120 99; 1195 101; 1295 72; 
+                  1304 36; 0 0;
+                  0 0"
+                keyTimes="0; 
+                  0.165; 0.215; 0.265; 0.315; 0.365; 0.415; 
+                  0.465; 0.515; 0.565; 0.615; 0.665; 0.715; 0.765;
+                  0.815; 0.865;
+                  1"/>
+        <g id="s2p1Blinking">
+          <animate attributeType="CSS"
+                attributeName="opacity"
+                calcMode="discrete"
+                values="0; 1; 0; 0"
+                keyTimes="0; 0.01; 0.5; 1"
+                dur="1s"
+                begin="3.75s"
+                repeatCount="indefinite"/>
+          <use xlink:href="#star1"/>
+          <g class="smallLine">
+            <line x1="10" y1="0" x2="0" y2="0" stroke-dasharray="3 12" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" />
+            <animate  dur="1s" 
+                  begin="3.75s"
+                  repeatCount="indefinite"
+                  calcMode="linear"
+                  attributeName="stroke-dashoffset" 
+                  values="3.5; -15" 
+                  keyTimes="0; 1"/>
+            <animateTransform attributeName="transform"
+                type="translate"
+                repeatCount="indefinite"
+                dur="4s"
+                begin="3.75s"
+                additive="sum"
+                calcMode="discrete"
+                values="0 2; 0 -20; -30 1.2; 1 22; 0 2"
+                keyTimes="0; 0.25; 0.5; 0.75; 1"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <g id="plane">
+    <animateMotion dur="20s"
+                  repeatCount="indefinite"
+                  calcMode="spline"
+                  keyPoints="0; 0.36; 1" 
+                  keyTimes="0; 0.35; 1"
+                  keySplines="0.33 0.16 0.65 0.7; 0.33 0.36 0.69 0.57">
+      <mpath href="#trajectory"/>
+    </animateMotion>
+    <animateTransform dur="20s"
+                  repeatCount="indefinite"
+                  calcMode="spline"
+                  attributeName="transform"
+                  type="rotate"
+                  values="-2; 0; 10; 11; 0; -10; -2"
+                  keyTimes="0; 0.012; 0.12; 0.17; 0.35; 0.7; 1"
+                  keySplines="0.32 0.63 0.7 1; 0.31 0.01 0.72 0.94; 0 0 1 1; 0.3 0.09 0.7 1; 0.31 0.01 0.72 0.94; 0.3 0.09 0.7 1"
+                  additive="sum"/>
 
+    <g id="nozzleTop">
+      <animateTransform dur="20s"
+                        repeatCount="indefinite"
+                        calcMode="spline"
+                        attributeName="transform"
+                        type="translate"
+                        values="0, 6; 0, 0; 0, 8"
+                        keyTimes="0; 0.3; 1"
+                        keySplines="0.63 0 0.4 1; 0.2 0 0.51 1"
+                        additive="sum"/>
+      <g id="nozzleTopTrack" transform="translate(192.4,-13.8)">
+        <path fill="none" stroke="#FFFFFF" stroke-dasharray="18,10,10,8,6,6,2,30" d="M0 0c-5.6,0-13,0-28,0"
+          />
+        <animate  dur="0.38s" 
+                  repeatCount="indefinite"
+                  calcMode="linear"
+                  attributeName="stroke-dashoffset" 
+                  values="30; 0; 30" 
+                  keyTimes="0; 0.9; 1"/>
+      </g>
+      <path id="nozzleTopInner" fill="#353535" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" d="M201.3-16h-6.8v3.6
+        h6.8L201.3-16z"/>
+    </g>
+    <g id="nozzleBottom">
+      <animateTransform dur="20s"
+                        repeatCount="indefinite"
+                        calcMode="spline"
+                        attributeName="transform"
+                        type="translate"
+                        values="0, -6.5; 0, 0; 0, -8.5"
+                        keyTimes="0; 0.3; 1"
+                        keySplines="0.63 0 0.4 1; 0.2 0 0.51 1"
+                        additive="sum"/>
+      <g id="nozzleBottomTrack" transform="translate(192.4,16.2)">
+        <path fill="none" stroke="#FFFFFF" stroke-dasharray="20,14,14,10,8,8,2,34" d="M0,0c-3.7,0-45.1,0-49,0"
+          />
+        <animate  dur="0.34s" 
+                  repeatCount="indefinite"
+                  calcMode="linear"
+                  attributeName="stroke-dashoffset" 
+                  values="34; 0; 34" 
+                  keyTimes="0; 0.9; 1"/>
+      </g>
+      <path id="nozzleBottomInner" fill="#353535" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" d="M200.4,18.4H194
+        v-3.6h6.5L200.4,18.4z"/>
+    </g>
+    <g id="wingTop" transform="translate(9.4, 0)">
+      <g>
+        <animateTransform dur="20s"
+                          repeatCount="indefinite"
+                          calcMode="spline"
+                          attributeName="transform"
+                          type="scale"
+                          values="1, 0.65; 1, 1; 1, 0.55"
+                          keyTimes="0; 0.3; 1"
+                          keySplines="0.63 0 0.4 1; 0.2 0 0.51 1"
+                          additive="sum"/>
+        <g transform="translate(-9.4, 0)">
+          <path fill="#353535" d="M213.1-4l-10.2-12.7c-1-1.2-2.4-1.9-3.9-1.9h-3.2L202.9-4"/>
+          <path fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" d="M213.1-4l-10.2-12.7
+            c-1-1.2-2.4-1.9-3.9-1.9h-3.2L202.9-4"/>
+        </g>
+      </g>
+    </g>
+    <g id="banner">
+      <path id="bannerShape" fill="#353535" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" d="M167.9,5.1
+        c-25.8-16.6-51.6,17.2-77.4,0.6c0-5.7,0-11.5,0-17.2c25.8,16.6,51.6-17.2,77.4-0.6C167.9-6.4,167.9-0.7,167.9,5.1z">
+        <animate attributeName="d"
+                 attributeType="XML"
+                 values="M167.9,5.1c-25.8-16.6-51.6,17.2-77.4,0.6c0-5.7,0-11.5,0-17.2c25.8,16.6,51.6-17.2,77.4-0.6C167.9-6.4,167.9-0.7,167.9,5.1z;
+                         M167.9,5.1c-25.8-16.6-68.5,10-78.4,2.6c0-5.7,0-11.5,0-17.2c8.8,7.2,52.6-19.2,78.4-2.6C167.9-6.4,167.9-0.7,167.9,5.1z;
+                         M167.9,5.1C128.4-11.2,100,0.5,91.4,5.7c0-5.7,0-11.5,0-17.2c4.4-5,38.9-16.5,76.4-0.6C167.9-6.4,167.9-0.7,167.9,5.1z;
+                         M167.9,5.1C142,10.3,105-4.9,89.2-0.6c0-5.7,0-11.5,0-17.2c13.7-5.5,46.3,7.2,78.7,5.7C167.9-6.4,167.9-0.7,167.9,5.1z;
+                         M167.9,5.1c-40.3,7.7-71.4-4-77.7-9.7c0-5.7,0-11.5,0-17.2c8.3,6.6,43.1,18,77.7,9.7C167.9-6.4,167.9-0.7,167.9,5.1z;
+                         M167.9,5.1c-16.1-5.7-49.6,13.1-77.7-2.7c0-5.7,0-11.5,0-17.2c31.7,17.3,60.8-1.2,77.7,2.7C167.9-6.4,167.9-0.7,167.9,5.1z;
+                         M167.9,5.1c-25.8-16.6-51.6,17.2-77.4,0.6c0-5.7,0-11.5,0-17.2c25.8,16.6,51.6-17.2,77.4-0.6C167.9-6.4,167.9-0.7,167.9,5.1z;"
+                 dur="8s"
+                 repeatCount="indefinite" />
+      </path>
+      <g id="word">
+        <g transform="translate(106, 1.9)">
+            <g>
+              <animateTransform dur="8s"
+                          repeatCount="indefinite"
+                          calcMode="spline"
+                          attributeName="transform"
+                          type="translate"
+                          values="0, 0; 0, -11; 0, 0"
+                          keyTimes="0; 0.42; 1"
+                          keySplines="0.31 0 0.64 1; 0.31 0 0.84 1"
+                          additive="sum"/>
+              <animateTransform dur="8s"
+                          repeatCount="indefinite"
+                          calcMode="spline"
+                          attributeName="transform"
+                          type="skewY"
+                          values="0; -6; 0; 6; 0"
+                          keyTimes="0; 0.2; 0.43; 0.6; 1"
+                          keySplines="0.31 0 0.64 1; 0.31 0 0.64 1; 0.31 0 0.64 1; 0.31 0 0.84 1"
+                          additive="sum"/>
+              <path id="w" transform="translate(-106, -1.9)" fill="#FFFFFF" d="M101.6-2.7c0.4,0.1,0.8,0.1,1.1,0.2c0.1,0.4,0.3,1.3,0.6,2.6c0.2,0.9,0.4,1.8,0.7,2.7
+                c0.2,0.9,0.4,1.6,0.5,2.1c0,0,0.1,0,0.1,0c0.6-2.4,1.1-4.8,1.7-7.2c0.3,0,0.6,0,0.9,0c0.6,2.4,1.1,4.8,1.7,7.2c0,0,0.1,0,0.1,0
+                c0.1-0.4,0.2-1,0.4-1.9c0.2-0.8,0.4-1.7,0.6-2.5c0.4-1.7,0.7-2.7,0.7-3.1c0.4,0,0.8-0.1,1.1-0.1c-0.2,0.8-0.6,2.5-1.2,5
+                c-0.3,1.3-0.5,2.3-0.7,3.1c-0.6,0.1-1.1,0.1-1.7,0.1c-0.6-2.2-1-4.1-1.2-5.4c0-0.2-0.1-0.4-0.1-0.5c0,0-0.1,0-0.1,0
+                c0,0.2-0.1,0.4-0.1,0.6c-0.2,0.7-0.3,1.5-0.5,2.2c-0.2,0.7-0.4,1.8-0.8,3.2c-0.6,0-1.1-0.1-1.7-0.1
+                C103.1,3.3,102.4,0.6,101.6-2.7z"/>
+          </g>
+        </g>
+        <g transform="translate(112, 1)">
+          <g>
+            <animateTransform dur="8s"
+                        repeatCount="indefinite"
+                        calcMode="spline"
+                        attributeName="transform"
+                        type="translate"
+                        values="0, 0; 0, -11; 0, 0.1; 0, 0"
+                        keyTimes="0; 0.32; 0.98; 1"
+                        keySplines="0.63 0 0.84 1; 0.31 0 0.64 1; 0.31 0 0.84 1"
+                        additive="sum"/>
+            <animateTransform dur="8s"
+                        repeatCount="indefinite"
+                        calcMode="spline"
+                        attributeName="transform"
+                        type="skewY"
+                        values="0; 6; 15; 0"
+                        keyTimes="0; 0.33; 0.75; 1"
+                        keySplines="0.63 0 0.84 1; 0.31 0 0.64 1; 0.31 0 0.84 1"
+                        additive="sum"/>
+            <path id="e1" transform="translate(-112, -1)" fill="#FFFFFF" d="M112.8,1.1c0-1.6,0-2.9-0.1-3.9c1.8-0.3,3.7-0.7,5.6-1.2c0,0.3,0,0.6,0,0.8c-1.5,0.4-3,0.7-4.5,1
+              c0,0.9,0,1.8,0,2.7c1.4-0.3,2.8-0.6,4.2-0.9c0,0.3,0,0.6,0,0.8c-1.4,0.3-2.8,0.6-4.2,0.9c0,0.9,0,1.8,0,2.7c1.5-0.3,3-0.6,4.5-1
+              c0,0.3,0,0.6,0,0.8c-1.9,0.5-3.7,0.9-5.6,1.2C112.7,4,112.8,2.7,112.8,1.1z"/>
+          </g>
+        </g>
+
+        <g transform="translate(122, 0)">
+          <g>
+            <animateTransform dur="8s"
+                        repeatCount="indefinite"
+                        calcMode="spline"
+                        attributeName="transform"
+                        type="translate"
+                        values="0, 0; 0, -9; 0, 1.3; 0, 0"
+                        keyTimes="0; 0.28; 0.88; 1"
+                        keySplines="0.63 0 0.84 1; 0.31 0 0.64 1; 0.31 0 0.84 1"
+                        additive="sum"/>
+            <animateTransform dur="8s"
+                        repeatCount="indefinite"
+                        calcMode="spline"
+                        attributeName="transform"
+                        type="skewY"
+                        values="0; 12; 10; 0"
+                        keyTimes="0; 0.29; 0.89; 1"
+                        keySplines="0.63 0 0.84 1; 0.31 0 0.64 1; 0.31 0 0.84 1"
+                        additive="sum"/>
+            <path id="l" transform="translate(-122, 0)" fill="#FFFFFF" d="M119.8,2.2c0-1.2,0-2,0-2.6c0-0.6,0-1.4,0-2.6c0-0.4,0-0.9,0-1.3c0.4-0.1,0.7-0.2,1.1-0.3
+              c0,1.3,0,2.6,0,3.8c0,1.1,0,2.2,0,3.2c0.5-0.1,1.3-0.4,2.3-0.7c0.7-0.2,1.1-0.4,1.4-0.5c0,0.3,0,0.6-0.1,0.9
+              c-1.6,0.5-3.2,1-4.8,1.4C119.8,3,119.8,2.6,119.8,2.2z"/>
+          </g>
+        </g> 
+
+        <g transform="translate(128, -3)">
+          <g>
+            <animateTransform dur="8s"
+                        repeatCount="indefinite"
+                        calcMode="spline"
+                        attributeName="transform"
+                        type="translate"
+                        values="0, 0; 0, -7.5; 0, 3; 0, 0"
+                        keyTimes="0; 0.25; 0.78; 1"
+                        keySplines="0.63 0 0.84 1; 0.31 0 0.84 1; 0.31 0 0.84 1"
+                        additive="sum"/>
+            <animateTransform dur="8s"
+                        repeatCount="indefinite"
+                        calcMode="spline"
+                        attributeName="transform"
+                        type="skewY"
+                        values="0; 24; 10; 0"
+                        keyTimes="0; 0.27; 0.81; 1"
+                        keySplines="0.63 0 0.84 1; 0.31 0 0.84 1; 0.31 0 0.84 1"
+                        additive="sum"/>
+            <path id="c" transform="translate(-128, 3)" fill="#FFFFFF" d="M125.5,0.8c-0.6-0.5-0.9-1.4-0.9-2.7c0-1.3,0.3-2.4,0.9-3.3c0.6-0.9,1.5-1.5,2.6-1.9
+              c1-0.3,1.7-0.3,2.3,0c0.5,0.3,0.9,0.9,1,1.8c-0.4,0.2-0.7,0.3-1.1,0.5c-0.1-0.7-0.4-1.2-0.8-1.4c-0.4-0.2-0.9-0.2-1.6,0
+              c-0.6,0.2-1.1,0.5-1.5,0.9c-0.6,0.9-0.8,1.9-0.8,3.1c0,1,0.2,1.7,0.7,2.1c0.4,0.4,1.1,0.5,1.9,0.2c0.6-0.2,1-0.4,1.4-0.8
+              c0.3-0.4,0.6-1,0.7-1.7c0.4-0.1,0.7-0.2,1.1-0.4c-0.2,0.9-0.5,1.7-1.1,2.8s-1.3,1.1-2.2,1.4C127,1.4,126.1,1.3,125.5,0.8z"/>
+          </g>
+        </g> 
+
+        <g transform="translate(136, -5.5)">
+          <g>
+            <animateTransform dur="8s"
+                        repeatCount="indefinite"
+                        calcMode="spline"
+                        attributeName="transform"
+                        type="translate"
+                        values="0, 0; 0, -5.5; 0, 4.5; 0, 0"
+                        keyTimes="0; 0.23; 0.7; 1"
+                        keySplines="0.63 0 0.84 1; 0.31 0 0.84 1; 0.31 0 0.84 1"
+                        additive="sum"/>
+            <animateTransform dur="8s"
+                        repeatCount="indefinite"
+                        calcMode="spline"
+                        attributeName="transform"
+                        type="skewY"
+                        values="0; 14; 5; 0"
+                        keyTimes="0; 0.24; 0.71; 1"
+                        keySplines="0.63 0 0.84 1; 0.31 0 0.84 1; 0.31 0 0.84 1"
+                        additive="sum"/>
+            <path id="o" transform="translate(-136, 5.5)" fill="#FFFFFF" d="M133.3-1.7c-0.6-0.5-0.9-1.4-0.9-2.7c0-1.3,0.3-2.4,0.9-3.3c0.6-0.9,1.5-1.5,2.6-1.9
+              c1.1-0.3,2-0.2,2.6,0.3c0.6,0.5,0.9,1.5,0.9,2.8c0,1.3-0.3,2.4-0.9,3.3c-0.6,0.9-1.5,1.5-2.6,1.8C134.8-1.2,134-1.2,133.3-1.7z
+              M137.5-3.1c0.6-0.8,1-1.9,1-3.1c0-1-0.2-1.7-0.7-2.2s-1-0.6-1.8-0.3c-0.6,0.2-1.2,0.5-1.6,0.9c-0.6,0.8-0.9,1.8-0.9,3
+              c0,0.7,0.1,1.2,0.3,1.7c0.2,0.4,0.5,0.7,0.9,0.9c0.4,0.1,0.8,0.1,1.3,0C136.6-2.5,137.1-2.8,137.5-3.1z"/>
+          </g>
+        </g> 
+
+        <g transform="translate(149, -9)">
+          <g>
+            <animateTransform dur="8s"
+                        repeatCount="indefinite"
+                        calcMode="spline"
+                        attributeName="transform"
+                        type="translate"
+                        values="0, 0; 0, -1.8; 0, 6; 0, 0"
+                        keyTimes="0; 0.2; 0.66; 1"
+                        keySplines="0.63 0 0.84 1; 0.31 0 0.84 1; 0.31 0 0.84 1"
+                        additive="sum"/>
+            <animateTransform dur="8s"
+                        repeatCount="indefinite"
+                        calcMode="spline"
+                        attributeName="transform"
+                        type="skewY"
+                        values="0; 14; 5; 0"
+                        keyTimes="0; 0.22; 0.68; 1"
+                        keySplines="0.63 0 0.84 1; 0.31 0 0.84 1; 0.31 0 0.84 1"
+                        additive="sum"/>
+            <path id="m" transform="translate(-149, 9)" fill="#FFFFFF" d="M141-7.6c0-0.6,0-1.4,0-2.4c0-0.3,0-0.6,0-0.9c0.6-0.1,1.1-0.3,1.7-0.4c0.8,2.1,1.6,4.1,2.4,6.2
+              c0,0,0.1,0,0.1,0c0.8-2.4,1.6-4.7,2.4-7c0.6-0.1,1.1-0.1,1.7-0.2c0,1.5,0,2.6,0,3.3c0,1.6,0,3.1,0.1,4.6c-0.3,0-0.7,0.1-1,0.1
+              c0-0.8,0-2,0-3.7c0-0.7,0-1.8,0-3.1c0,0-0.1,0-0.1,0c-0.8,2.4-1.7,4.7-2.5,7.2c-0.3,0.1-0.7,0.1-1,0.2c-0.8-2.1-1.7-4.2-2.5-6.3
+              c0,0-0.1,0-0.1,0c0,0.3,0,0.6,0,1c0,1,0,1.7,0,2.2c0,0.8,0,1.7,0,2.5c0,0.4,0,0.8,0,1.2c-0.3,0.1-0.7,0.2-1,0.2
+              C141-5,141-6.6,141-7.6z"/>
+          </g>
+        </g>   
+
+        <g transform="translate(156, -7.5)">
+          <g>
+            <animateTransform dur="8s"
+                        repeatCount="indefinite"
+                        calcMode="spline"
+                        attributeName="transform"
+                        type="translate"
+                        values="0, 0; 0, -1; 0, 6; 0, 0"
+                        keyTimes="0; 0.2; 0.65; 1"
+                        keySplines="0.63 0 0.84 1; 0.31 0 0.84 1; 0.31 0 0.84 1"
+                        additive="sum"/>
+            <animateTransform dur="8s"
+                        repeatCount="indefinite"
+                        calcMode="spline"
+                        attributeName="transform"
+                        type="skewY"
+                        values="0; 2; -10; 0"
+                        keyTimes="0; 0.2; 0.65; 1"
+                        keySplines="0.63 0 0.84 1; 0.31 0 0.84 1; 0.31 0 0.84 1"
+                        additive="sum"/>
+            <path transform="translate(-156, 7.5)" id="e2" fill="#FFFFFF" d="M151.2-8.4c0-1.6,0-2.9-0.1-4c1.8,0,3.7,0.1,5.6,0.4c0,0.3,0,0.6,0,0.8c-1.5-0.2-3-0.4-4.5-0.4
+              c0,0.9,0,1.8,0,2.7c1.4,0,2.8,0.1,4.2,0.3c0,0.3,0,0.6,0,0.8c-1.4-0.2-2.8-0.3-4.2-0.4c0,0.9,0,1.8,0,2.7c1.5,0,3,0.1,4.5,0.4
+              c0,0.3,0,0.6,0,0.8c-1.9-0.3-3.7-0.4-5.6-0.4C151.1-5.5,151.2-6.8,151.2-8.4z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <path id="rope" fill="none" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" d="M167.9-3.2h13"/>
+    <path id="body" fill="#353535" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" d="M202.8,5.6l24.5,0
+      c1.7,0,3.1-1.4,3.1-3.1c0-2.3-9.2-6.4-11.6-6.5L216.4-4h-28.7l-2.3-6.1h-4.5V-4v1.9c0,1.6,1,3,2.5,3.4c4.3,1.5,10.4,4.3,15.1,4.3
+      H202.8"/>
+    <g id="wingBottom" transform="translate(9.4, 0)">
+      <g>
+        <animateTransform dur="20s"
+                          repeatCount="indefinite"
+                          calcMode="spline"
+                          attributeName="transform"
+                          type="scale"
+                          values="1, 0.65; 1, 1; 1, 0.55"
+                          keyTimes="0; 0.3; 1"
+                          keySplines="0.63 0 0.4 1; 0.2 0 0.51 1"
+                          additive="sum"/>
+        <g transform="translate(-9.4, 0)">
+          <path fill="#353535" stroke="#FFFFFF" stroke-linejoin="round" stroke-miterlimit="10" d="M199,20h-3.2l9-18.3
+            h11.1l-12.9,16.4C202,19.3,200.5,20,199,20z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

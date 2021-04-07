@@ -1,6 +1,6 @@
 import 'picturefill/dist/picturefill.min';
 
-import {Menu, Slider, ModalTriggers, TicketsSlider} from './modules/page-parts';
+import {Menu, Slider, ModalTriggers, TicketsSlider, Scrollers} from './modules/page-parts';
 import FullPageScroll  from './modules/full-page-scroll';
 import AnimatedCart    from './modules/animated-cart';
 
@@ -11,6 +11,7 @@ class App {
     this.slider        = new Slider();
     this.modalTriggers = new ModalTriggers();
     this.ticketsSlider = new TicketsSlider();
+    this.scrollers     = new Scrollers();
 
     this.fullPageScroll = new FullPageScroll(this);
 

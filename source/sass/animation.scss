@@ -8,26 +8,50 @@
   }
 
   &.active {
+    .whiff {
+      animation-name: show-whiff;
+      animation-duration: 1.5s;
+      animation-iteration-count: 1;
+      animation-timing-function: cubic-bezier(0, 0, 0, 1);
+      animation-fill-mode: forwards;
+    }
+
     .features-list__item {
       &:nth-child(2) {
+        .whiff {
+          animation-delay: 0.1s;
+        }
+
         .features-list__item-feature,
         .features-list__item-value {
           transition-delay: 0.2s;
         }
       }
       &:nth-child(3) {
+        .whiff {
+          animation-delay: 0.2s;
+        }
+
         .features-list__item-feature,
         .features-list__item-value {
           transition-delay: 0.3s;
         }
       }
       &:nth-child(4) {
+        .whiff {
+          animation-delay: 0.35s;
+        }
+
         .features-list__item-feature,
         .features-list__item-value {
           transition-delay: 0.4s;
         }
       }
       &:nth-child(5) {
+        .whiff {
+          animation-delay: 0.5s;
+        }
+
         .features-list__item-feature,
         .features-list__item-value {
           transition-delay: 0.55s;
@@ -41,6 +65,15 @@
 .intro__title-line {
   &::before {
     transition: width 0.5s ease;
+  }
+
+  &.active .whiff {
+    animation-name: show-whiff-infinite;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.7s;
+    animation-timing-function: cubic-bezier(0, 0, 0, 1);
+    animation-fill-mode: forwards;
   }
 }
 
@@ -126,6 +159,11 @@
   &::after {
     transition: transform 0.3s ease;
   }
+}
+
+
+.main-menu__link path {
+  transition: stroke 0.8s ease, fill 0.8s ease, stroke-dashoffset 0.8s ease;
 }
 
 
@@ -249,6 +287,14 @@
   }
 }
 
+
+.page-header__cart.updated .whiff {
+  animation-name: show-and-hide-whiff;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.26, 0, 0.4, 1);
+  animation-fill-mode: forwards;
+}
 
 .map__decor {
   .bird {

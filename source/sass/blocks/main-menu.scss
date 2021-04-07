@@ -29,12 +29,35 @@
     pointer-events: none;
   }
 
+  &:not(.main-menu--opened) .main-menu__link:hover path {
+    stroke-dashoffset: 0;
+  }
+
   &:not(.main-menu--opened) .main-menu__link.active path {
-    stroke: #fff;
+    stroke-dashoffset: 0;
+    fill: $c-purple;
+    stroke: $c-drak-storke;
+
+    &.always-white {
+      stroke: #ffffff;
+    }
+
+    &.active-purple {
+      stroke: $c-purple;
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      fill: var(--light);
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      fill: var(--light);
+    }
   }
 
   &.main-menu--opened .main-menu__link path {
     stroke: #000000;
+    stroke-dashoffset: 0;
   }
 
   @media (min-width: $stop-scaling) {

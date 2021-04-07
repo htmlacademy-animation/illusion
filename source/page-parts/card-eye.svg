@@ -9,4 +9,47 @@
   <mask id="upper_eyelid_mask" fill="#fff">
       <use xlink:href="#upper_eyelid" />
   </mask>
+  <animate
+      id="eye_apple_move"
+      xlink:href="#eye_apple"
+      attributeName="cx"
+      values="13; 16; 16; 13; 10; 10; 13; 13; 13; 13; 16; 16; 13; 10; 10; 13; 16; 16; 13; 13"
+      keyTimes="0; 0.01; 0.04; 0.05; 0.06; 0.1; 0.12; 0.16; 0.18; 0.5; 0.51; 0.54; 0.55; 0.56; 0.6; 0.63; 0.65; 0.71; 0.73; 1"
+      begin="4.2s;eye_apple_move.begin+23s"
+      dur="20s"
+      />
+  <animate
+      xlink:href="#eye_apple"
+      attributeName="cy"
+      values="16; 16; 16; 16; 16; 16; 18; 18; 16; 16; 16; 16; 16; 16; 16; 16; 17; 17; 16; 16"
+      keyTimes="0; 0.01; 0.04; 0.05; 0.06; 0.1; 0.12; 0.16; 0.18; 0.5; 0.51; 0.54; 0.55; 0.56; 0.6; 0.63; 0.65; 0.71; 0.73; 1"
+      begin="4.2s;eye_apple_move.begin+23s"
+      dur="20s"
+      />
+  <animate
+      xlink:href="#eye_apple"
+      attributeName="r"
+      values="2.6; 2.0; 2.0; 2.6; 2.0; 2.0; 2.0; 2.0; 2.6; 2.6; 2.0; 2.0; 2.6; 2.0; 2.0; 2.2; 2.0; 2.0; 2.6; 2.6"
+      keyTimes="0; 0.01; 0.04; 0.05; 0.06; 0.1; 0.12; 0.16; 0.18; 0.5; 0.51; 0.54; 0.55; 0.56; 0.6; 0.63; 0.65; 0.71; 0.73; 1"
+      begin="4.2s;eye_apple_move.begin+23s"
+      dur="20s"
+      />
+  <animate
+      id="upper_eyelid_close"
+      xlink:href="#upper_eyelid"
+      attributeName="d"
+      to="M6.5 16 C 7.5 18.5, 18.5 18.5 19.5 16 C18.5 21.5 7.5 21.5 6.5 15.5Z"
+      begin="250ms;1500ms;2000ms;4000ms;7000ms;8250ms;10500ms;13300ms;15700ms;16300ms;upper_eyelid_close.begin+19300ms"
+      dur="75ms"
+      fill="freeze"
+      />
+  <animate
+      id="upper_eyelid_open"
+      xlink:href="#upper_eyelid"
+      attributeName="d"
+      to="M6.5 16 C 7.5 10.5, 18.5 10.5 19.5 16 C18.5 21.5 7.5 21.5 6.5 15.5Z"
+      dur="75ms"
+      begin="upper_eyelid_close.end + 30ms"
+      fill="freeze"
+      />
 </svg>

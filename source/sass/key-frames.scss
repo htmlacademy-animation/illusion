@@ -1,3 +1,46 @@
+@keyframes show-whiff {
+  from {
+    stroke-dashoffset: -33%;
+  }
+
+  to {
+    stroke-dashoffset: 53%;
+  }
+}
+
+
+@keyframes show-whiff-infinite {
+  0%,
+  0.1% {
+    stroke-dashoffset: -33%;
+  }
+
+  28% {
+    stroke-dashoffset: 53%;
+  }
+
+  90% {
+    stroke-dashoffset: 53%;
+    animation-timing-function: cubic-bezier(1, 0, 1, 1);
+  }
+
+  100% {
+    stroke-dashoffset: 87%;
+  }
+}
+
+
+@keyframes show-and-hide-whiff {
+  from {
+    stroke-dashoffset: -33%;
+  }
+
+  to {
+    stroke-dashoffset: 87%;
+  }
+}
+
+
 @keyframes slider__show-paragraph {
   0% {
     transform: translateX(6em);

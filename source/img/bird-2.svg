@@ -1,4 +1,17 @@
 <svg width="15" height="13.5" viewBox="0 0 15 13.5" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path style="fill:none;stroke:#fff;stroke-width:1;stroke-miterlimit:10;" d="M13.5,3.5c-3.3,0-6,2.2-6,5v0.2c0-2.8-2.7-5-6-5">
+  <path style="fill:none;stroke:#fff;stroke-width:1;stroke-miterlimit:10;">
+      <animate
+          dur="370ms"
+          repeatCount="indefinite"
+          attributeName="d"
+          keyTimes = "0; 0.25; 0.8; 1"
+          values="
+          M13.5,3.5c-3.3,0-6,2.2-6,5v0.2c0-2.8-2.7-5-6-5;
+          M14.2,6c-3.3,0-6.7-0.3-6.7,2.5v0.2c0-2.8-3.5-2.6-6.8-2.6;
+          M12.2,0.9C9.5,2.6,7.5,5.7,7.5,8.5v0.2c0-2.8-1.8-6-4.7-7.7;
+          M13.5,3.5c-3.3,0-6,2.2-6,5v0.2c0-2.8-2.7-5-6-5
+          "
+          begin="-60ms"
+      />
   </path>
 </svg>
