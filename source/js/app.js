@@ -26,7 +26,9 @@ class App {
     this.fullPageScroll = new FullPageScroll(this);
 
     this.view3d = new ThreeBackground();
-    this.view3d.start();
+    this.view3d.load().then(() => {
+      this.view3d.start();
+    });
 
     this.whaleScene = new WhaleScene({
       canvas: `#whale-canvas`
