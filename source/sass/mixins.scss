@@ -1,0 +1,46 @@
+@mixin container {
+  margin: 0 auto;
+  padding: 0 4rem;
+  width: 100%;
+
+  @media (min-width: $stop-scaling) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    padding: 0 1rem;
+  }
+}
+
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+@mixin btn-reset {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  @media (pointer: coarse) {
+    cursor: default;
+  }
+}
+
+
+@mixin hover {
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.5;
+    outline: none;
+  }
+}
+

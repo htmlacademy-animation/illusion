@@ -1,0 +1,353 @@
+.tickets-form {
+  margin: auto;
+  box-sizing: border-box;
+  padding-left: 2.3rem;
+  width: 100%;
+  max-width: 72.4rem;
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 3rem 0 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+.tickets-form__row {
+  flex: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  width: 100%;
+  padding-left: .5rem;
+
+  @media (min-width: $stop-scaling) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    align-items: flex-end;
+    margin-bottom: 3.3rem;
+  }
+
+  @media (max-width: $tablet - 1) and (orientation: landscape) {
+    margin-bottom: 1rem;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      margin-top: auto;
+    }
+
+    p.tickets-form__label {
+      @media (max-width: $tablet) and (orientation: portrait) {
+        display: none;
+      }
+    }
+  }
+
+  &--disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+
+.tickets-form__label {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2rem;
+  flex-grow: 1;
+  text-transform: uppercase;
+
+  @media (min-width: $stop-scaling) {
+    margin-right: 20px;
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 1rem;
+    margin-bottom: 0.8rem;
+    width: calc(100% - 10rem);
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: $small-tablet) and (orientation: portrait) {
+    font-size: 1.2rem;
+  }
+
+  > span {
+    &:first-child {
+      order: -1;
+
+      @media (max-width: $tablet) and (orientation: portrait) {
+        margin-bottom: 1.1rem;
+      }
+    }
+
+    &:nth-child(2) {
+      @media (max-width: $tablet) and (orientation: portrait) {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        &::after {
+          content: "";
+          flex-grow: 1;
+          margin-left: 1rem;
+          height: 1px;
+          background-color: var(--dark);
+        }
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    flex-grow: 1;
+    margin: 0 1.5rem;
+    height: 1px;
+    background-color: var(--dark);
+
+    @media (min-width: $stop-scaling) {
+      margin: 0 15px;
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      display: none;
+    }
+  }
+
+  em {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0.5rem;
+    text-transform: none;
+    font-style: normal;
+    font-size: 1.2rem;
+    line-height: 1.1;
+
+    @media (min-width: $stop-scaling) {
+      margin-top: 5px;
+      font-size: 12px;
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      top: auto;
+      bottom: 100%;
+      margin-bottom: 0.3rem;
+    }
+  }
+}
+
+
+.tickets-form__field {
+  position: relative;
+  flex: none;
+  width: 16.4rem;
+
+  @media (min-width: $stop-scaling) {
+    width: 164px;
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    width: 9rem;
+  }
+
+  input {
+    display: block;
+    padding: 0 5rem;
+    width: 100%;
+    height: 5rem;
+    text-align: center;
+    font-family: inherit;
+    font-size: 1.8rem;
+    line-height: 1.1;
+    background-color: transparent;
+    border: 0;
+    appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+
+    @media (min-width: $stop-scaling) {
+      padding: 0 50px;
+      height: 50px;
+      font-size: 18px;
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      padding: 0 3rem;
+      height: 3rem;
+      font-size: 1.2rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+
+.tickets-form__counter {
+  @include btn-reset;
+  position: absolute;
+  top: 0;
+  width: 5rem;
+  height: 5rem;
+  font-size: 0;
+
+  @media (min-width: $stop-scaling) {
+    width: 50px;
+    height: 50px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid var(--dark);
+    border-radius: 50%;
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 2rem;
+      height: 1px;
+      background-color: var(--dark);
+
+      @media (min-width: $stop-scaling) {
+        width: 20px;
+      }
+
+      @media (max-width: $tablet) and (orientation: portrait) {
+        width: 1.2rem;
+      }
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      transform: scale(1.1);
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    &::before {
+      background-color: var(--light);
+    }
+  }
+
+  &:active {
+    &::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--light);
+      border-color: var(--light);
+    }
+  }
+
+  &--decrease {
+    left: 0;
+
+    span {
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+
+  &--increase {
+    right: 0;
+  }
+
+  &[disabled] {
+    pointer-events: none;
+    opacity: 0.3;
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    width: 3rem;
+    height: 3rem;
+
+    &:focus,
+    &:hover {
+      &::before {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+
+.tickets-form__button {
+  position: relative;
+  flex: none;
+  width: 16.4rem;
+
+  @media (min-width: $stop-scaling) {
+    width: 164px;
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    margin-top: -1rem;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+
+.tickets-form__ticket {
+  position: absolute;
+  top: 20%;
+  left: 90%;
+  display: inline-block;
+  opacity: 0;
+  pointer-events: none;
+}
+

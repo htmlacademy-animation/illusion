@@ -1,0 +1,260 @@
+.canvas-fw-fh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3.4rem;
+  width: 144rem;
+  max-width: 100%;
+  background-image: url("../img/sky.svg");
+  background-repeat: no-repeat;
+  background-size: 75.7rem auto;
+  background-position: top 16.3rem left 39.5rem;
+
+  @media (min-width: $stop-scaling) {
+    padding-top: calc(34px * #{$index});
+    background-size: calc(757px * #{$index}) auto;
+    background-position: top calc(163px * #{$index}) left calc(395px * #{$index});
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    padding-top: 0;
+    background-image: none;
+  }
+
+  @media (max-width: $tablet - 1) and (orientation: landscape) {
+    padding-top: 0;
+    background-image: none;
+  }
+}
+
+
+.canvas__frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 34rem;
+  height: 49.4rem;
+  background-color: var(--purple);
+  overflow: hidden;
+
+  @media (min-width: $stop-scaling) {
+    width: calc(340px * #{$index});
+    height: calc(494px * #{$index});
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    width: 100%;
+    height: 100vh;
+  }
+
+  @media ($wider) {
+    max-height: 90vh;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      width: 100%;
+      max-width: none;
+      height: 100%;
+    }
+  }
+}
+
+
+.canvas__items {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 144rem;
+  max-width: 100%;
+
+  @media (min-width: $stop-scaling) {
+    width: calc(1440px * #{$index});
+  }
+}
+
+
+.canvas__item {
+  position: absolute;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &--cloud1 {
+    top: 50%;
+    left: 72rem;
+    transform: translateY(-16rem);
+    width: 51rem;
+    height: 21.4rem;
+
+    @media (min-width: $stop-scaling) {
+      left: calc(720px * #{$index});
+      transform: translateY(-160px * #{$index});
+      width: 510px * #{$index};
+      height: 214px * #{$index};
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      top: auto;
+      bottom: 50%;
+      left: 50%;
+      transform: translateX(-4rem) translateY(1rem);
+      width: 43.4rem;
+      height: 18.2rem;
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      top: auto;
+      bottom: 50%;
+      left: 50%;
+      transform: translateX(-4rem) translateY(1rem);
+      width: 43.4rem;
+      height: 18.2rem;
+    }
+  }
+
+  &--cloud2 {
+    top: 50%;
+    left: 15.3rem;
+    transform: translateY(3rem);
+    width: 51rem;
+    height: 28.2rem;
+
+    @media (min-width: $stop-scaling) {
+      left: calc(153px * #{$index});
+      transform: translateY(calc(30px * #{$index}));
+      width: calc(510px * #{$index});
+      height: calc(282px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      left: auto;
+      right: 50%;
+      width: 42.6rem;
+      height: 24rem;
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      left: auto;
+      right: 50%;
+      width: 42.6rem;
+      height: 24rem;
+    }
+  }
+
+  &--whale {
+    top: 50%;
+    left: 38rem;
+    transform: translateY(-50%) translateY(3rem);
+    width: 79.4rem;
+    height: 34.3rem;
+
+    @media (min-width: $stop-scaling) {
+      left: calc(380px * #{$index});
+      transform: translateY(-50%) translateY(calc(30px * #{$index}));
+      width: calc(794px * #{$index});
+      height: calc(343px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      transform: translateX(-50%) translateX(-10.4rem) translateY(-50%) translateY(-0.5rem);
+      width: 53.4rem;
+      height: 23.2rem;
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      left: 50%;
+      transform: translateX(-50%) translateX(1.4rem) translateY(-50%) translateY(-0.5rem);
+      width: 53.4rem;
+      height: 23.2rem;
+    }
+  }
+
+  &--balloon1 {
+    top: 50%;
+    left: 48.4rem;
+    transform: translateY(-50%) translateY(-8rem);
+    width: 22.8rem;
+    height: 36.4rem;
+
+    @media (min-width: $stop-scaling) {
+      left: calc(484px * #{$index});
+      transform: translateY(-50%) translateY(-80px * #{$index});
+      width: 228px * #{$index};
+      height: calc(364px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      left: 50%;
+      transform: translateY(-50%) translateY(-6rem) translateX(-6rem);
+      width: 13.2rem;
+      height: 21.1rem;
+      z-index: 1;
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      left: 50%;
+      transform: translateY(-50%) translateY(-6rem) translateX(-6rem);
+      width: 13.2rem;
+      height: 21.1rem;
+      z-index: 1;
+    }
+  }
+
+  &--balloon2 {
+    top: 50%;
+    left: 55.7rem;
+    transform: translateY(-50%) translateY(-9rem);
+    width: 14.9rem;
+    height: 41.8rem;
+
+    @media (min-width: $stop-scaling) {
+      left: calc(557px * #{$index});
+      transform: translateY(-50%) translateY(-90px * #{$index});
+      width: 149px * #{$index};
+      height: calc(418px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      left: 50%;
+      transform: translateY(-50%) translateY(-6.5rem) translateX(-50%) translateX(2.5rem);
+      width: 8.6rem;
+      height: 24rem;
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      left: 50%;
+      transform: translateY(-50%) translateY(-6.5rem) translateX(-50%) translateX(2.5rem);
+      width: 8.6rem;
+      height: 24rem;
+    }
+  }
+}
+

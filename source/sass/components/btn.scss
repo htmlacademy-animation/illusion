@@ -1,0 +1,321 @@
+.btn {
+  @include btn-reset;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 7rem;
+  height: 7rem;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: inherit;
+  color: inherit;
+  user-select: none;
+
+  @media (min-width: $stop-scaling) {
+    min-width: 70px;
+    height: 70px;
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    min-width: 4rem;
+    height: 4rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  span {
+    text-decoration: underline;
+  }
+
+  svg {
+    display: block;
+    max-width: 2.4rem;
+  
+    &.whiff {
+      max-width: unset;
+    }
+  }
+
+  &:hover {
+    color: var(--purple);
+  }
+
+  &:focus {
+    outline: none;
+    color: var(--purple);
+
+    &::after {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-color: var(--purple);
+    }
+  }
+
+  &:active {
+    color: var(--purple);
+    outline: none;
+
+    &::after {
+      top: -1rem;
+      left: -1rem;
+      right: -1rem;
+      bottom: -1rem;
+      border-color: var(--purple);
+
+      @media (min-width: $stop-scaling) {
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+      }
+
+      @media (max-width: $tablet) and (orientation: portrait) {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+
+.btn--primary {
+  padding: 1.9rem 3rem 1.8rem;
+  height: 5rem;
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+  color: var(--dark);
+  border-radius: 2.5rem;
+
+  @media (min-width: $stop-scaling) {
+    padding: 19px 30px 18px;
+    height: 50px;
+    font-size: 12px;
+    line-height: 13px;
+    border-radius: 25px;
+  }
+
+  span,
+  svg {
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid var(--dark);
+    border-radius: 2.5rem;
+
+    @media (min-width: $stop-scaling) {
+      border-radius: 25px;
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      border-radius: 3.5rem;
+    }
+  }
+
+  &:hover {
+    color: var(--dark);
+
+    &::after {
+      top: -0.5rem;
+      left: -0.5rem;
+      right: -0.5rem;
+      bottom: -0.5rem;
+      border-color: var(--dark);
+      border-radius: 4rem;
+
+      @media (min-width: $stop-scaling) {
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        border-radius: 40px;
+      }
+
+      @media (max-width: $tablet) and (orientation: portrait) {
+        border-radius: 5rem;
+      }
+    }
+  }
+
+  &:active {
+    color: var(--dark);
+    background-color: var(--light);
+
+    &::after {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 2.5rem;
+      border-color: var(--dark);
+
+      @media (min-width: $stop-scaling) {
+        border-radius: 25px;
+      }
+
+      @media (max-width: $tablet) and (orientation: portrait) {
+        border-radius: 3.5rem;
+      }
+    }
+  }
+
+  &:focus {
+    color: var(--dark);
+    background-color: var(--light);
+
+    &::after {
+      top: -0.5rem;
+      left: -0.5rem;
+      right: -0.5rem;
+      bottom: -0.5rem;
+      background-color: var(--light);
+      border-color: var(--dark);
+      border-radius: 4rem;
+
+      @media (min-width: $stop-scaling) {
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+        border-radius: 40px;
+      }
+
+      @media (max-width: $tablet) and (orientation: portrait) {
+        border-radius: 5rem;
+      }
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+
+    &::after {
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    padding: 2.5rem 2.1rem;
+    height: 5rem;
+    text-transform: none;
+    font-size: 1.4rem;
+    border-radius: 3.5rem;
+
+    &:focus,
+    &:hover {
+      &::after {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+
+.btn--medium {
+  padding: 2.6rem 3.3rem 2.4rem;
+  height: 7rem;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  border-radius: 3.5rem;
+
+  @media (min-width: $stop-scaling) {
+    height: 70px;
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    padding: 2.5rem 2.1rem;
+    height: 5rem;
+    text-transform: none;
+    font-size: 1.4rem;
+  }
+
+  &::after {
+    border-radius: 3.5rem;
+
+    @media (min-width: $stop-scaling) {
+      border-radius: 35px;
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      border-radius: 4.5rem;
+    }
+  }
+
+  &:hover {
+    &::after {
+      border-radius: 4rem;
+
+      @media (min-width: $stop-scaling) {
+        border-radius: 40px;
+      }
+
+      @media (max-width: $tablet) and (orientation: portrait) {
+        border-radius: 4rem;
+      }
+    }
+  }
+
+  &:active {
+    &::after {
+      border-radius: 3.5rem;
+
+      @media (min-width: $stop-scaling) {
+        border-radius: 35px;
+      }
+
+      @media (max-width: $tablet) and (orientation: portrait) {
+        border-radius: 4.5rem;
+      }
+    }
+  }
+
+  &:focus {
+    &::after {
+      border-radius: 4rem;
+
+      @media (min-width: $stop-scaling) {
+        border-radius: 40px;
+      }
+
+      @media (max-width: $tablet) and (orientation: portrait) {
+        border-radius: 5rem;
+      }
+    }
+  }
+
+  @media (min-width: $stop-scaling) {
+    padding: 26px 33px 24px;
+    font-size: 18px;
+    line-height: 20px;
+    border-radius: 35px;
+  }
+}
+

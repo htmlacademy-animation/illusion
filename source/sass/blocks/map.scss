@@ -1,0 +1,1214 @@
+$map-trees-options: (
+  "focus": (
+    "x": 348,
+    "y": 94,
+  ),
+  "focus2": (
+    "x": 820,
+    "y": 130,
+  ),
+  "toilet": (
+    "x": 542,
+    "y": 405,
+  ),
+  "toilet2": (
+    "x": 604,
+    "y": 51,
+  ),
+  "food": (
+    "x": 541,
+    "y": 203,
+  ),
+  "center": (
+    "x": 820,
+    "y": 266,
+  ),
+);
+
+
+$map-clouds-options: (
+  "left": (
+    "x": 314,
+    "y": 47,
+  ),
+);
+
+
+$map-birds-options: (
+  "1-left": (
+    "x": 283,
+    "y": 87,
+  ),
+  "1-right": (
+    "x": 427,
+    "y": 51,
+  ),
+  "2": (
+    "x": 629,
+    "y": 174,
+  ),
+  "3": (
+    "x": 898,
+    "y": 101,
+  ),
+  "4-left": (
+    "x": 626,
+    "y": 387,
+  ),
+  "4-right": (
+    "x": 667,
+    "y": 407,
+  ),
+);
+
+
+.map {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 20.2rem 15.2rem 7.5rem 4.5rem;
+  min-height: 100vh;
+  background-image: url("../img/map.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top 47% center;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/map@2x.png");
+  }
+
+  @media (min-width: $stop-scaling) {
+    padding: 202px 152px 75px 45px;
+    background-size: 2000px auto;
+
+    @media ($wider) {
+      padding-bottom: 0;
+    }
+  }
+
+  @media (min-height: 1440px) {
+    background-position: center;
+    background-size: auto 1440px;
+  }
+
+  @media ($narrower) {
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media ($wider) {
+    min-height: 76rem;
+
+    @media (min-width: $stop-scaling) {
+      min-height: 760px;
+    }
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    padding: 9rem 14rem 1rem 1rem;
+    height: 100vh;
+    min-width: calc(141rem * #{$mult});
+  }
+
+  @media (max-width: $tablet - 1) and (orientation: landscape) {
+    padding: 1rem 11rem 1rem 1rem;
+    min-height: 80rem;
+    min-width: 138rem;
+  }
+
+  @media (max-height: $small-tablet) and (orientation: landscape) {
+    height: 100vh;
+    min-width: calc(141rem * #{$mult});
+  }
+
+  @media (max-width: $small-tablet) and (orientation: portrait) {
+    padding-bottom: 4rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url("../img/noize.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+
+.map__title {
+  position: fixed;
+  top: 15.7rem;
+  left: 4rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 3.6rem;
+  line-height: 1.1;
+
+  @media (min-width: $stop-scaling) {
+    top: 157px;
+    left: 40px;
+    font-size: 36px;
+  }
+
+  @media ($wider) {
+    top: 12rem;
+
+    @media (min-width: $stop-scaling) {
+      top: 120px;
+    }
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    position: sticky;
+    top: 8.8rem;
+    left: 1rem;
+    margin-right: auto;
+    font-size: 2.4rem;
+  }
+
+  @media (max-width: $tablet - 1) and (orientation: landscape) {
+    position: sticky;
+    top: 8.8rem;
+    left: 1rem;
+    margin-right: auto;
+    font-size: 2.4rem;
+  }
+
+  @media (max-width: $small-tablet) and (orientation: portrait) {
+    font-size: 2rem;
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+  }
+
+  @media (max-height: $small-tablet) and (orientation: landscape) {
+    padding: 0 0 0 5rem;
+    font-size: 2rem;
+  }
+}
+
+
+.map__content {
+  position: relative;
+  width: 124rem;
+  height: 48.2rem;
+  color: var(--light);
+  z-index: 1;
+
+  @media (min-width: $stop-scaling) {
+    width: calc(1240px * #{$index});
+    height: calc(482px * #{$index});
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    margin: auto 0;
+    width: calc(124rem * #{$mult});
+    height: 35rem;
+  }
+
+  @media (max-width: $tablet - 1) and (orientation: landscape) {
+    margin: auto 0;
+    width: 124rem;
+    height: 35rem;
+  }
+}
+
+
+.map__decor {
+  svg {
+    display: block;
+    width: 100px;
+    height: auto;
+  }
+
+  img {
+    position: absolute;
+    display: block;
+    height: auto;
+
+    &.decor {
+      width: 100%;
+    }
+
+    &.trees {
+      width: 74 / 1240 * 100%;
+    }
+
+    &.cloud {
+      width: 80 / 1240 * 100%;
+    }
+
+    &.fish {
+      width: 100 / 1240 * 100%;
+      top: 420 / 482 * 100%;
+      left: 1070 / 1240 * 100%;
+    }
+
+    @each $key-cloud, $cloud-options in $map-clouds-options {
+      $x-cloud: map_get($cloud-options, "x");
+      $y-cloud: map_get($cloud-options, "y");
+
+      &.cloud-#{$key-cloud} {
+        left: $x-cloud / 1240 * 100%;
+        top: $y-cloud / 482 * 100%;
+      }
+    }
+
+    &.cloud-right {
+      left: 75%;
+      top: 15.56017%;
+    }
+
+    @each $key, $tree-options in $map-trees-options {
+      $x: map_get($tree-options, "x");
+      $y: map_get($tree-options, "y");
+
+      &.trees-#{$key} {
+        left: $x / 1240 * 100%;
+        top: $y / 482 * 100%;
+      }
+    }
+  }
+
+  .bird {
+    position: absolute;
+    display: block;
+    width: 15 / 1240 * 100%;
+    height: auto;
+    line-height: 0;
+
+    &-wrap {
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-top: 13.5 / 15 * 100%;
+    }
+
+    &-img {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    @each $key, $options in $map-birds-options {
+      $x-bird: map_get($options, "x");
+      $y-bird: map_get($options, "y");
+
+      &.bird-#{$key} {
+        left: $x-bird / 1240 * 100%;
+        top: $y-bird / 482 * 100%;
+      }
+    }
+  }
+}
+
+
+.map__plane {
+  position: absolute;
+  top: 25%;
+  left: 2%;
+  width: 30%;
+  height: 30%;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+
+  svg {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    display: block;
+    width: 100%;
+  }
+}
+
+
+.map__controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 1;
+
+  button {
+    position: absolute;
+  }
+
+  span {
+    pointer-events: none;
+  }
+}
+
+
+.map__entrance {
+  @include btn-reset;
+  display: block;
+  width: 1.7rem;
+  height: 1.7rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--light);
+  background-color: var(--light);
+  border-radius: 50%;
+
+  @media (min-width: $stop-scaling) {
+    width: calc(17px * #{$index});
+    height: calc(17px * #{$index});
+    font-size: calc(12px * #{$index});
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    width: calc(1.7rem * #{$mult});
+    height: calc(1.7rem * #{$mult});
+    font-size: calc(1.2rem * #{$mult});
+  }
+
+  @media (max-width: $tablet - 1) and (orientation: landscape) {
+    width: 1.7rem;
+    height: 1.7rem;
+    font-size: 1.2rem;
+  }
+
+  span {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1rem;
+    white-space: nowrap;
+    opacity: 0;
+
+    @media (min-width: $stop-scaling) {
+      margin-top: calc(10px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      margin-top: calc(1rem * #{$mult});
+      opacity: 1;
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      margin-top: 1rem;
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    span {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    span {
+      opacity: 1;
+    }
+  }
+
+  &--first {
+    top: 0;
+    left: 81.3rem;
+
+    @media (min-width: $stop-scaling) {
+      left: calc(813px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      left: calc(81.3rem * #{$mult});
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      left: 81.3rem;
+    }
+  }
+
+  &--second {
+    top: 29rem;
+    left: 30.6rem;
+
+    @media (min-width: $stop-scaling) {
+      top: calc(290px * #{$index});
+      left: calc(306px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      top: calc(29rem * #{$mult});
+      left: calc(30.6rem * #{$mult});
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      top: 29rem;
+      left: 30.6rem;
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait),
+    (max-width: $tablet - 1) and (orientation: landscape) {
+      span {
+        left: auto;
+        right: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: 0;
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+
+.map__place {
+  @include btn-reset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  font-size: 1.2rem;
+  color: var(--light);
+  border: 1px solid var(--light);
+  border-radius: 50%;
+
+  @media (min-width: $stop-scaling) {
+    width: calc(45px * #{$index});
+    height: calc(45px * #{$index});
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    width: calc(4.5rem * #{$mult});
+    height: calc(4.5rem * #{$mult});
+    font-size: calc(1.2rem * #{$mult});
+  }
+
+  @media (max-width: $tablet - 1) and (orientation: landscape) {
+    width: 4.5rem;
+    height: 4.5rem;
+    font-size: 1.2rem;
+  }
+
+  &--food {
+    top: 20.9rem;
+    left: 63rem;
+
+    @media (min-width: $stop-scaling) {
+      top: calc(209px * #{$index});
+      left: calc(630px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      top: calc(20.9rem * #{$mult});
+      left: calc(63rem * #{$mult});
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      top: 20.9rem;
+      left: 63rem;
+    }
+
+    svg {
+      width: 2.5rem;
+      height: 2.1rem;
+
+      @media (min-width: $stop-scaling) {
+        width: calc(25px * #{$index});
+        height: calc(21px * #{$index});
+      }
+
+      @media (max-width: $tablet) and (orientation: portrait) {
+        width: calc(2.5rem * #{$mult});
+        height: calc(2.1rem * #{$mult});
+      }
+
+      @media (max-width: $tablet - 1) and (orientation: landscape) {
+        width: 2.5rem;
+        height: 2.1rem;
+      }
+    }
+  }
+
+  &--wc {
+    svg {
+      width: 1.9rem;
+      height: 2rem;
+
+      @media (min-width: $stop-scaling) {
+        width: calc(19px * #{$index});
+        height: calc(20px * #{$index});
+      }
+
+      @media (max-width: $tablet) and (orientation: portrait) {
+        width: calc(1.9rem * #{$mult});
+        height: calc(2rem * #{$mult});
+      }
+
+      @media (max-width: $tablet - 1) and (orientation: landscape) {
+        width: 1.9rem;
+        height: 2rem;
+      }
+    }
+  }
+
+  &--wc1 {
+    top: 5.6rem;
+    left: 68.4rem;
+
+    @media (min-width: $stop-scaling) {
+      top: calc(56px * #{$index});
+      left: calc(684px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      top: calc(5.6rem * #{$mult});
+      left: calc(68.4rem * #{$mult});
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      top: 5.6rem;
+      left: 68.4rem;
+    }
+  }
+
+  &--wc2 {
+    top: 41rem;
+    left: 49.3rem;
+
+    @media (min-width: $stop-scaling) {
+      top: calc(410px * #{$index});
+      left: calc(493px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      top: calc(41rem * #{$mult});
+      left: calc(49.3rem * #{$mult});
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      top: 41rem;
+      left: 49.3rem;
+    }
+  }
+
+  svg {
+    display: block;
+  }
+
+  span {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1rem;
+    white-space: nowrap;
+    opacity: 0;
+
+    @media (min-width: $stop-scaling) {
+      margin-top: calc(10px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      margin-top: calc(1rem * #{$mult});
+      opacity: 1;
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      margin-top: 1rem;
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    span {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    span {
+      opacity: 1;
+    }
+  }
+}
+
+
+.map__info {
+  @include btn-reset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  font-size: 1.2rem;
+  color: var(--light);
+
+  @media (min-width: $stop-scaling) {
+    width: calc(45px * #{$index});
+    height: calc(45px * #{$index});
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    width: calc(4.5rem * #{$mult});
+    height: calc(4.5rem * #{$mult});
+    font-size: calc(1.2rem * #{$mult});
+  }
+
+  @media (max-width: $tablet - 1) and (orientation: landscape) {
+    width: 4.5rem;
+    height: 4.5rem;
+    font-size: 1.2rem;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4.5rem;
+    height: 4.5rem;
+    transform-origin: top left;
+
+    @media (min-width: $stop-scaling) {
+      width: calc(45px * #{$index});
+      height: calc(45px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      width: calc(4.5rem * #{$mult});
+      height: calc(4.5rem * #{$mult});
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+  }
+
+  path {
+    transform-origin: 50%;
+  }
+
+  span {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1rem;
+    white-space: nowrap;
+    opacity: 0;
+
+    @media (min-width: $stop-scaling) {
+      margin-top: calc(10px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      margin-top: calc(1rem * #{$mult});
+      opacity: 1;
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      margin-top: 1rem;
+      opacity: 1;
+    }
+  }
+
+  b {
+    position: relative;
+    font-weight: 400;
+    color: var(--dark);
+    z-index: 1;
+  }
+
+  &:hover {
+    span {
+      opacity: 1;
+    }
+
+    svg {
+      transform: scale(1.2) translate(-50%, -50%);
+
+      @media (min-width: $stop-scaling) {
+        transform: translate(-50%, -50%);
+        width: calc(55px * #{$index});
+        height: calc(55px * #{$index});
+      }
+
+      @media (max-width: $tablet) and (orientation: portrait) {
+        transform: scale(calc(2.2 * #{$mult})) translate(-50%, -50%);
+      }
+
+      @media (max-width: $tablet - 1) and (orientation: landscape) {
+        transform: scale(1.2) translate(-50%, -50%);
+      }
+    }
+
+    path {
+      transform: rotate(95deg);
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    span {
+      opacity: 1;
+    }
+
+    svg {
+      transform: scale(1.2) translate(-50%, -50%);
+
+      @media (min-width: $stop-scaling) {
+        transform: translate(-50%, -50%);
+        width: calc(55px * #{$index});
+        height: calc(55px * #{$index});
+      }
+
+      @media (max-width: $tablet) and (orientation: portrait) {
+        transform: scale(calc(2.2 * #{$mult})) translate(-50%, -50%);
+      }
+
+      @media (max-width: $tablet - 1) and (orientation: landscape) {
+        transform: scale(1.2) translate(-50%, -50%);
+      }
+    }
+  }
+
+  &--1 {
+    top: 0.8rem;
+    left: 85rem;
+
+    @media (min-width: $stop-scaling) {
+      top: calc(8px * #{$index});
+      left: calc(850px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      top: calc(0.8rem * #{$mult});
+      left: calc(85rem * #{$mult});
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      top: 0.8rem;
+      left: 85rem;
+    }
+  }
+
+  &--2 {
+    top: 24.2rem;
+    left: 33rem;
+
+    @media (min-width: $stop-scaling) {
+      top: calc(242px * #{$index});
+      left: calc(330px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      top: calc(24.2rem * #{$mult});
+      left: calc(33rem * #{$mult});
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      top: 24.2rem;
+      left: 33rem;
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait),
+    (max-width: $tablet - 1) and (orientation: landscape) {
+      span {
+        top: auto;
+        bottom: 100%;
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &--3 {
+    top: 36.9rem;
+    left: 77.2rem;
+
+    @media (min-width: $stop-scaling) {
+      top: calc(369px * #{$index});
+      left: calc(772px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      top: calc(36.9rem * #{$mult});
+      left: calc(77.3rem * #{$mult});
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      top: 36.9rem;
+      left: 77.3rem;
+    }
+  }
+}
+
+
+.map__event {
+  @include btn-reset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  font-size: 1.2rem;
+  color: var(--dark);
+  border: 2px solid transparent;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: var(--light);
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transform: translate(-50%, -50%);
+    transform-origin: top left;
+  }
+
+  @media (min-width: $stop-scaling) {
+    width: calc(45px * #{$index});
+    height: calc(45px * #{$index});
+    font-size: calc(12px * #{$index});
+
+    &::before {
+      width: calc(45px * #{$index});
+      height: calc(45px * #{$index});
+    }
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    width: calc(4.5rem * #{$mult});
+    height: calc(4.5rem * #{$mult});
+    font-size: calc(1.2rem * #{$mult});
+
+    &::before {
+      width: calc(4.5rem * #{$mult});
+      height: calc(4.5rem * #{$mult});
+    }
+  }
+
+  @media (max-width: $tablet - 1) and (orientation: landscape) {
+    width: 4.5rem;
+    height: 4.5rem;
+    font-size: 1.2rem;
+  }
+
+  svg {
+    display: block;
+    margin-top: -0.2rem;
+    width: 2.1rem;
+    height: 2.5rem;
+
+    @media (min-width: $stop-scaling) {
+      margin-top: calc(-2px * #{$index});
+      width: calc(21px * #{$index});
+      height: calc(25px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      margin-top: calc(-0.2rem * #{$mult});
+      width: calc(2.1rem * #{$mult});
+      height: calc(2.5rem * #{$mult});
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      margin-top: -0.2rem;
+      width: 2.1rem;
+      height: 2.5rem;
+    }
+  }
+
+  span {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1rem;
+    color: var(--light);
+    white-space: nowrap;
+    opacity: 0;
+
+    @media (min-width: $stop-scaling) {
+      margin-top: calc(10px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      margin-top: calc(1rem * #{$mult});
+      opacity: 1;
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      margin-top: 1rem;
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    &::before {
+      transform: scale(1.2) translate(-50%, -50%);
+
+      @media (min-width: $stop-scaling) {
+        transform: scale(1.1) translate(-50%, -50%);
+        width: calc(55px * #{$index});
+        height: calc(55px * #{$index});
+      }
+
+      @media (max-width: $tablet) and (orientation: portrait) {
+        transform: scale(calc(2 * #{$mult})) translate(-50%, -50%);
+      }
+
+      @media (max-width: $tablet - 1) and (orientation: landscape) {
+        transform: scale(1.2) translate(-50%, -50%);
+      }
+    }
+
+    span {
+      opacity: 1;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    &::before {
+      transform: scale(1.2) translate(-50%, -50%);
+      border-color: var(--purple);
+
+      @media (min-width: $stop-scaling) {
+        transform: none;
+        margin-top: -5px * #{$index};
+        margin-left: -5px * #{$index};
+        width: calc(55px * #{$index});
+        height: calc(55px * #{$index});
+      }
+
+      @media (max-width: $tablet) and (orientation: portrait) {
+        transform: scale(calc(2 * #{$mult})) translate(-50%, -50%);
+      }
+
+      @media (max-width: $tablet - 1) and (orientation: landscape) {
+        transform: scale(1.2) translate(-50%, -50%);
+      }
+    }
+
+    span {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    &::before {
+      transform: scale(1.2) translate(-50%, -50%);
+      color: var(--light);
+      background-color: var(--purple);
+      border-color: var(--purple);
+
+      @media (min-width: $stop-scaling) {
+        transform: none;
+        margin-top: -5px * #{$index};
+        margin-left: -5px * #{$index};
+        width: calc(55px * #{$index});
+        height: calc(55px * #{$index});
+      }
+
+      @media (max-width: $tablet) and (orientation: portrait) {
+        transform: scale(calc(2 * #{$mult})) translate(-50%, -50%);
+      }
+
+      @media (max-width: $tablet - 1) and (orientation: landscape) {
+        transform: scale(1.2) translate(-50%, -50%);
+      }
+    }
+
+    span {
+      opacity: 1;
+    }
+  }
+
+  &--main {
+    top: 36.4rem;
+    left: 86.9rem;
+
+    @media (min-width: $stop-scaling) {
+      top: calc(364px * #{$index});
+      left: calc(869px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      top: calc(36.4rem * #{$mult});
+      left: calc(86.9rem * #{$mult});
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      top: 36.4rem;
+      left: 86.9rem;
+    }
+
+    svg {
+      margin: 0;
+      width: 3.6rem;
+      height: 2.2rem;
+
+      @media (min-width: $stop-scaling) {
+        width: calc(36px * #{$index});
+        height: calc(22px * #{$index});
+      }
+
+      @media (max-width: $tablet) and (orientation: portrait) {
+        width: calc(3.6rem * #{$mult});
+        height: calc(2.2rem * #{$mult});
+      }
+
+      @media (max-width: $tablet - 1) and (orientation: landscape) {
+        width: 3.6rem;
+        height: 2.2rem;
+      }
+    }
+
+    span {
+      @media (max-width: $tablet) and (orientation: portrait),
+      (max-width: $tablet - 1) and (orientation: landscape) {
+        width: 7em;
+        white-space: normal;
+      }
+    }
+  }
+
+  &--1 {
+    top: 9.9rem;
+    left: 45.4rem;
+
+    @media (min-width: $stop-scaling) {
+      top: calc(99px * #{$index});
+      left: calc(454px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      top: calc(9.9rem * #{$mult});
+      left: calc(45.4rem * #{$mult});
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      top: 9.9rem;
+      left: 45.4rem;
+    }
+  }
+
+  &--2 {
+    top: 26.5rem;
+    left: 45.4rem;
+
+    @media (min-width: $stop-scaling) {
+      top: calc(265px * #{$index});
+      left: calc(454px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      top: calc(26.5rem * #{$mult});
+      left: calc(45.4rem * #{$mult});
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      top: 26.5rem;
+      left: 45.4rem;
+    }
+  }
+
+  &--3 {
+    top: 13.7rem;
+    left: 76.1rem;
+
+    @media (min-width: $stop-scaling) {
+      top: calc(137px * #{$index});
+      left: calc(761px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      top: calc(13.7rem * #{$mult});
+      left: calc(76.1rem * #{$mult});
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      top: 13.7rem;
+      left: 76.1rem;
+    }
+  }
+
+  &--4 {
+    top: 26.5rem;
+    left: 93.4rem;
+
+    @media (min-width: $stop-scaling) {
+      top: calc(265px * #{$index});
+      left: calc(934px * #{$index});
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      top: calc(26.5rem * #{$mult});
+      left: calc(93.4rem * #{$mult});
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      top: 26.5rem;
+      left: 93.4rem;
+    }
+  }
+
+  &--active {
+    &::before {
+      color: var(--dark);
+      background-color: var(--purple);
+    }
+
+    &:focus {
+      margin-top: 0;
+      margin-left: 0;
+      width: 4.5rem;
+      height: 4.5rem;
+
+      @media (min-width: $stop-scaling) {
+        width: calc(45px * #{$index});
+        height: calc(45px * #{$index});
+      }
+
+      @media (max-width: $tablet) and (orientation: portrait) {
+        width: calc(4.5rem * #{$mult});
+        height: calc(4.5rem * #{$mult});
+      }
+
+      @media (max-width: $tablet - 1) and (orientation: landscape) {
+        width: 4.5rem;
+        height: 4.5rem;
+      }
+    }
+
+    span {
+      opacity: 1;
+    }
+  }
+}
+

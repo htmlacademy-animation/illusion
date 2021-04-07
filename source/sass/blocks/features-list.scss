@@ -1,0 +1,190 @@
+.features-list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 72.3rem;
+  position: fixed;
+  top: 50%;
+  right: 5rem;
+  transform: translateY(-50%);
+
+  @media (min-width: $stop-scaling) {
+    width: 723px;
+  }
+
+  @media (max-height: $small-tablet) and (orientation: landscape) {
+    top: calc(50% + 2.5rem);
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    right: 1rem;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: calc(100% - 10rem);
+    max-width: 40rem;
+    transform: translateY(calc(-50% + 2.5rem));
+  }
+
+  @media (max-width: $small-tablet) and (orientation: portrait) {
+    right: 1rem;
+    left: 1rem;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: calc(100% - 2rem);
+    max-width: 40rem;
+    transform: translateY(calc(-50% + 2.5rem));
+  }
+}
+
+
+.features-list__item {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+  width: calc(50% - 3.5rem);
+  min-height: 9.8rem;
+
+  @media (min-width: $stop-scaling) {
+    margin-bottom: 30px;
+    min-height: 98px;
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    margin-bottom: 3.1rem;
+    width: 100%;
+    min-height: 3.6rem;
+
+    &:first-child {
+      order: 1;
+    }
+
+    &:nth-child(2) {
+      order: 2;
+    }
+
+    &:nth-child(3) {
+      order: 4;
+    }
+
+    &:nth-child(4) {
+      order: 3;
+    }
+
+    &:nth-child(5) {
+      order: 5;
+    }
+  }
+
+  @media (max-width: $tablet - 1) and (orientation: landscape) {
+    min-height: 3.6rem;
+  }
+}
+
+
+.features-list__item-icon {
+  margin-bottom: 0.5rem;
+
+  @media (min-width: $stop-scaling) {
+    margin-bottom: 5px;
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    margin-right: 2.5rem;
+    margin-bottom: 0;
+    color: var(--purple);
+  }
+
+  @media (max-width: $tablet - 1) and (orientation: landscape) {
+    margin-right: 2.5rem;
+    margin-bottom: 0;
+    color: var(--purple);
+  }
+
+  svg {
+    width: 3.1rem;
+    height: 3.1rem;
+
+    @media (min-width: $stop-scaling) {
+      width: 31px;
+      height: 31px;
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      width: 2.5rem;
+      hight: 2.5rem;
+    }
+
+    @media (max-width: $tablet - 1) and (orientation: landscape) {
+      width: 2.5rem;
+      hight: 2.5rem;
+    }
+  }
+}
+
+
+.features-list__item-value {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-right: 1.5rem;
+  font-weight: 400;
+  font-size: 5.6rem;
+  text-align: right;
+  flex-shrink: 0;
+
+  &_4 {
+    width: 14rem;
+  }
+
+  &_2 {
+    width: 10rem;
+  }
+
+  @media (min-width: $stop-scaling) {
+    margin-right: 15px;
+    font-size: 56px;
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    font-size: 3.6rem;
+    width: 2em;
+  }
+
+  @media (max-width: $tablet - 1) and (orientation: landscape) {
+    font-size: 3.6rem;
+    width: 2em;
+  }
+
+  .features-list:not(.active) & {
+    opacity: 0;
+  }
+}
+
+
+.features-list__item-feature {
+  margin-left: 1.2rem;
+  font-size: 1.8rem;
+  line-height: 1.8;
+
+  @media (min-width: $tablet - 1) {
+    white-space: nowrap;
+  }
+
+  @media (min-width: $stop-scaling) {
+    margin-left: 12px;
+    font-size: 18px;
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    margin-left: 0.5rem;
+    font-size: 1.35rem;
+  }
+
+  .features-list:not(.active) & {
+    opacity: 0;
+  }
+}
+

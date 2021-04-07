@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-7 -1 73 16">
+  <g>
+    <path d="M20,14H53" fill="none" stroke="#fff" stroke-miterlimit="10"/>
+    <path d="M0,14H12" fill="none" stroke="#fff" stroke-miterlimit="10"/>
+  </g>
+  <path id="cloudOne"
+        d="M5,8.63H22.86a8.63,8.63,0,0,1,17.27,0h7.24" fill="none" stroke="#fff"
+        stroke-miterlimit="10"/>
+</svg>

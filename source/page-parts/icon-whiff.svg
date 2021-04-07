@@ -1,0 +1,10 @@
+<svg width="31" height="31" class="whiff" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<path d="M15.4966 0V9.70317" stroke="currentColor" stroke-miterlimit="10" />
+	<path d="M15.4966 31V21.29" stroke="currentColor" stroke-miterlimit="10" />
+	<path d="M31 15.4966H21.29" stroke="currentColor" stroke-miterlimit="10" />
+	<path d="M0 15.4966H9.70317" stroke="currentColor" stroke-miterlimit="10" />
+	<path d="M26.4602 4.53992L19.5962 11.404" stroke="currentColor" stroke-miterlimit="10" />
+	<path d="M4.54004 26.4601L11.4041 19.5961" stroke="currentColor" stroke-miterlimit="10" />
+	<path d="M26.4602 26.4601L19.5962 19.5961" stroke="currentColor" stroke-miterlimit="10" />
+	<path d="M4.54004 4.53992L11.4041 11.404" stroke="currentColor" stroke-miterlimit="10" />
+</svg>

@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Illusion</title>
+</head>
+<body>
+
+<div class="global-wrapper">
+
+  <header class="page-header js-header">
+    <div class="page-header__wrapper">
+      <div class="page-header__period">13—19<span class="desktop">.04.2020</span><span class="mobile">апреля</span></div>
+      <a class="page-header__logo">иллюзион</a>
+      <div class="page-header__nav">
+        <ul class="page-header__social">
+          <li>
+            <a href="#" target="_blank" class="social-btn" aria-label="Мы в Facebook">
+              <span>fb</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" class="social-btn" aria-label="Мы ВКонтакте">
+              <span>vk</span>
+            </a>
+          </li>
+        </ul>
+        <div class="page-header__cart">
+          <a href="#" class="page-header__btn btn" aria-label="Перейти к корзине">
+            <include src="./page-parts/card-eye.svg"></include>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-menu js-menu" id="menu">
+    <a class="main-menu__logo">иллюзион</a>
+    <div class="main-menu__overlay js-overlay"></div>
+    <button class="btn main-menu__toggler js-menu-toggler" type="button" aria-label="Управление меню">
+      <span class="main-menu__toggler-line"></span>
+    </button>
+    <ul class="main-menu__list">
+      <li class="main-menu__item">
+        <a href="#top" data-href="top" class="main-menu__link js-menu-link" data-scrollspy="#top">
+          <span class="main-menu__link-icon">
+            <include src="./page-parts/menu-link-top.svg"></include>
+          </span>
+          <span class="main-menu__link-text">Главная</span>
+        </a>
+      </li>
+      <li class="main-menu__item">
+        <a href="#about" data-href="about" class="main-menu__link js-menu-link" data-scrollspy="#about">
+          <span class="main-menu__link-icon">
+            <include src="./page-parts/menu-link-about.svg"></include>
+          </span>
+          <span class="main-menu__link-text">о фестивале</span>
+        </a>
+      </li>
+      <li class="main-menu__item">
+        <a href="#show" data-href="show" class="main-menu__link js-menu-link" data-scrollspy="#show">
+          <span class="main-menu__link-icon">
+            <include src="./page-parts/menu-link-show.svg"></include>
+          </span>
+          <span class="main-menu__link-text">шоу-программа</span>
+        </a>
+      </li>
+      <li class="main-menu__item">
+        <a href="#mc" data-href="mc" class="main-menu__link js-menu-link" data-scrollspy="#mc">
+          <span class="main-menu__link-icon">
+            <include src="./page-parts/menu-link-mc.svg"></include>
+          </span>
+          <span class="main-menu__link-text">мастер-классы</span>
+        </a>
+      </li>
+      <li class="main-menu__item">
+        <a href="#map" data-href="map" class="main-menu__link js-menu-link" data-scrollspy="#map">
+          <span class="main-menu__link-icon">
+            <include src="./page-parts/menu-link-map.svg"></include>
+          </span>
+          <span class="main-menu__link-text">карта фестиваля</span>
+        </a>
+      </li>
+      <li class="main-menu__item">
+        <a href="#tickets" data-href="tickets" class="main-menu__link js-menu-link" data-scrollspy="#tickets">
+          <span class="main-menu__link-icon">
+            <include src="./page-parts/menu-link-tickets.svg"></include>
+          </span>
+          <span class="main-menu__link-text">билеты</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="main-menu__social">
+      <li>
+        <a href="#" class="social-btn" aria-label="Мы в Facebook">
+          <span>fb</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="social-btn" aria-label="Мы ВКонтакте">
+          <span>vk</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <main class="page-content">
+
+    <div class="animation-screen"></div>
+
+    <section class="screen screen--hidden screen--intro js-scrollspy" id="top">
+      <div class="screen__wrapper">
+        <div class="intro">
+          <h1 class="intro__title">
+            <span class="intro__text">
+              Фестиваль магического искусства иллюзион
+            </span>
+            <span class="intro__title-line">
+              <include src="./page-parts/icon-whiff-cutted.svg"></include>
+            </span>
+          </h1>
+          <a href="#about" class="intro__scroll-link" aria-label="Перейти к следующему экрану">
+            <svg width="17" height="28" fill="none">
+              <use xlink:href="img/sprite_auto.svg#arr-down" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen screen--hidden screen--slogan js-scrollspy" id="about">
+      <div class="screen__wrapper">
+        <h2 class="slogan"><span class="slogan__col slogan__col--1">Самое масштабное<br>&#x20;яркое</span> <br><span class="slogan__col slogan__col--2">Поражающее воображение</span> <span class="slogan__col slogan__col--3">событие года</span></h2>
+      </div>
+    </section>
+
+    <section class="screen screen--hidden screen--features" id="numbers">
+      <div class="screen__wrapper">
+        <ul class="features-list" id="js-features-list">
+          <li class="features-list__item">
+          <span class="features-list__item-icon">
+            <include src="./page-parts/icon-whiff.svg"></include>
+          </span>
+            <span class="features-list__item-value features-list__item-value_4">50</span>
+            <span class="features-list__item-feature">иллюзионистов</span>
+          </li>
+          <li class="features-list__item">
+          <span class="features-list__item-icon">
+            <include src="./page-parts/icon-whiff.svg"></include>
+          </span>
+            <span class="features-list__item-value features-list__item-value_2">20</span>
+            <span class="features-list__item-feature">стран</span>
+          </li>
+          <li class="features-list__item">
+          <span class="features-list__item-icon">
+            <include src="./page-parts/icon-whiff.svg"></include>
+          </span>
+            <span class="features-list__item-value features-list__item-value_4">1100</span>
+            <span class="features-list__item-feature">м <sup>2</sup></span>
+          </li>
+          <li class="features-list__item">
+          <span class="features-list__item-icon">
+            <include src="./page-parts/icon-whiff.svg"></include>
+          </span>
+            <span class="features-list__item-value features-list__item-value_2">7</span>
+            <span class="features-list__item-feature">дней</span>
+          </li>
+          <li class="features-list__item">
+          <span class="features-list__item-icon">
+            <include src="./page-parts/icon-whiff.svg"></include>
+          </span>
+            <span class="features-list__item-value features-list__item-value_4">103</span>
+            <span class="features-list__item-feature">незабываемых&nbsp;шоу</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="screen screen--hidden screen--show js-scrollspy" id="show">
+      <div class="screen__image">
+      </div>
+      <div class="screen__wrapper">
+        <div class="show">
+          <h2 class="show__title">шоу-программа:</h2>
+          <div class="show__info">
+            <div class="show__col">
+              <a href="#" class="show__link">
+                <span>Amato Jakomo</span>
+              </a>
+              <p class="show__text">Амато&nbsp;<br>Джакомо</p>
+            </div>
+            <div class="show__col">
+              <p class="show__date">15.04.2020</p>
+              <p class="show__text show__text-2">Вызов&nbsp;<br>силам природы</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen screen--hidden screen--mc js-scrollspy" id="mc">
+      <div class="screen__wrapper">
+        <div class="slider">
+          <h2 class="slider__title">мастер-классы</h2>
+          <div class="slider__el swiper-container js-slider">
+            <div class="swiper-wrapper">
+              <div class="slider__item swiper-slide">
+                <div class="slider__content">
+                  <h3 class="slider__subtitle">Для новичков</h3>
+                  <ul class="slider__list">
+                    <li>
+                      <include src="./page-parts/icon-whiff.svg"></include>
+                      <span>фокусы с&nbsp;картами и&nbsp;мелкими предметами</span>
+                    </li>
+                    <li>
+                      <include src="./page-parts/icon-whiff.svg"></include>
+                      <span>актерское мастерство для&nbsp;фокусника</span>
+                    </li>
+                    <li>
+                      <include src="./page-parts/icon-whiff.svg"></include>
+                      <span>секреты фокусов</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="slider__item swiper-slide">
+                <div class="slider__content">
+                  <h3 class="slider__subtitle">Для детей</h3>
+                  <ul class="slider__list">
+                    <li>
+                      <include src="./page-parts/icon-whiff.svg"></include>
+                      <span>фокусы с&nbsp;монетой</span>
+                    </li>
+                    <li>
+                      <include src="./page-parts/icon-whiff.svg"></include>
+                      <span>фокусы с&nbsp;перестановкой цифр</span>
+                    </li>
+                    <li>
+                      <include src="./page-parts/icon-whiff.svg"></include>
+                      <span>фокусы с&nbsp;перестановкой цифр</span>
+                    </li>
+                    <li>
+                      <include src="./page-parts/icon-whiff.svg"></include>
+                      <span>актерское мастерство для самых маленьких</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="slider__item swiper-slide">
+                <div class="slider__content">
+                  <h3 class="slider__subtitle">Для опытных</h3>
+                  <ul class="slider__list">
+                    <li>
+                      <include src="./page-parts/icon-whiff.svg"></include>
+                      <span>сложные фокусы с&nbsp;картами</span>
+                    </li>
+                    <li>
+                      <include src="./page-parts/icon-whiff.svg"></include>
+                      <span>как создать шоу-иллюзию</span>
+                    </li>
+                    <li>
+                      <include src="./page-parts/icon-whiff.svg"></include>
+                      <span>микромагия</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="slider__controls">
+              <button class="slider__control slider__control--prev swiper-button-prev" type="button" aria-label="Перейти к предыдущему слайду">
+                <svg width="42" height="25" fill="none">
+                  <use xlink:href="img/sprite_auto.svg#arr-prev" />
+                </svg>
+              </button>
+              <button class="slider__control slider__control--next swiper-button-next" type="button" aria-label="Перейти к следующему слайду">
+                <svg width="42" height="25" fill="none">
+                  <use xlink:href="img/sprite_auto.svg#arr-next" />
+                </svg>
+              </button>
+              <div class="slider__pagination swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen screen--hidden screen--map js-scrollspy" id="map">
+      <div class="map">
+        <h2 class="map__title">Карта мероприятия</h2>
+        <div class="map__content">
+          <div class="map__decor">
+            <img class="trees trees-focus" src="img/map-tree-two.svg" alt="">
+            <img class="trees trees-focus2" src="img/map-tree-two.svg" alt="">
+            <img class="trees trees-toilet" src="img/map-tree-two.svg" alt="">
+            <img class="trees trees-toilet2" src="img/map-tree-two.svg" alt="">
+            <img class="trees trees-food" src="img/map-tree-two.svg" alt="">
+            <img class="trees trees-center" src="img/map-tree-one.svg" alt="">
+            <img class="cloud cloud-left" src="img/map-cloud-one.svg" alt="">
+            <img class="cloud cloud-right" src="img/map-cloud-two.svg" alt="">
+              <img class="fish" src="img/map-fish.svg" alt="">
+              <span class="bird bird-1-left">
+                <span class="bird-wrap"><img class="bird-img" src="img/bird.svg" alt=""></span>
+              </span>
+              <span class="bird bird-1-right">
+                <span class="bird-wrap"><img class="bird-img" src="img/bird-2.svg" alt=""></span>
+              </span>
+              <span class="bird bird-2">
+                <span class="bird-wrap"><img class="bird-img" src="img/bird-2.svg" alt=""></span>
+              </span>
+              <span class="bird bird-3">
+                <span class="bird-wrap"><img class="bird-img" src="img/bird.svg" alt=""></span>
+              </span>
+              <span class="bird bird-4-left">
+                <span class="bird-wrap"><img class="bird-img" src="img/bird-2.svg" alt=""></span>
+              </span>
+              <span class="bird bird-4-right">
+                <span class="bird-wrap"><img class="bird-img" src="img/bird.svg" alt=""></span>
+              </span>
+          </div>
+          <div class="map__controls">
+            <button class="map__entrance map__entrance--first" type="button">
+              <span>вход 1</span>
+            </button>
+            <button class="map__entrance map__entrance--second" type="button">
+              <span>вход 2</span>
+            </button>
+            <button class="map__place map__place--food" type="button">
+              <include src="./page-parts/map-place-food.svg"></include>
+              <span>фудкорт</span>
+            </button>
+            <button class="map__place map__place--wc map__place--wc1" type="button">
+              <include src="./page-parts/map-place-wc.svg"></include>
+              <span>туалет</span>
+            </button>
+            <button class="map__place map__place--wc map__place--wc2" type="button">
+              <include src="./page-parts/map-place-wc.svg"></include>
+              <span>туалет</span>
+            </button>
+            <button class="map__info map__info--1" type="button">
+              <include src="./page-parts/map-info.svg"></include>
+              <b>i</b>
+              <span>стойка <br>информации</span>
+            </button>
+            <button class="map__info map__info--2" type="button">
+              <include src="./page-parts/map-info.svg"></include>
+              <b>i</b>
+              <span>стойка <br>информации</span>
+            </button>
+            <button class="map__info map__info--3" type="button">
+              <include src="./page-parts/map-info.svg"></include>
+              <b>i</b>
+              <span>стойка <br>информации</span>
+            </button>
+            <button class="map__event map__event--main js-modal-trigger" data-target="main-scene" type="button">
+              <include src="./page-parts/map-event-main.svg"></include>
+              <span>главная сцена</span>
+            </button>
+            <button class="map__event map__event--1 js-modal-trigger" data-target="tent1" type="button">
+              <include src="./page-parts/map-event.svg"></include>
+              <span>карточные <br>фокусы</span>
+            </button>
+            <button class="map__event map__event--2 js-modal-trigger" data-target="tent2" type="button">
+              <include src="./page-parts/map-event.svg"></include>
+              <span>карточные <br>фокусы</span>
+            </button>
+            <button class="map__event map__event--3 js-modal-trigger" data-target="tent3" type="button">
+              <include src="./page-parts/map-event.svg"></include>
+              <span>карточные <br>фокусы</span>
+            </button>
+            <button class="map__event map__event--4 js-modal-trigger" data-target="tent4" type="button">
+              <include src="./page-parts/map-event.svg"></include>
+              <span>карточные <br>фокусы</span>
+            </button>
+          </div>
+        </div>
+        <div class="map__plane">
+            <include src="./page-parts/map-plane.svg"></include>
+        </div>
+      </div>
+      <div class="screen__scrollers">
+        <button class="screen__scroller screen__scroller--prev js-map-scroller" data-direction="left" type="button" aria-label="Скроллить влево">
+          <svg width="25" height="15" fill="none">
+            <use xlink:href="img/sprite_auto.svg#arr-prev" />
+          </svg>
+        </button>
+        <button class="screen__scroller screen__scroller--next js-map-scroller" data-direction="right" type="button" aria-label="Скроллить вправо">
+          <svg width="25" height="15" fill="none">
+            <use xlink:href="img/sprite_auto.svg#arr-next" />
+          </svg>
+        </button>
+        <button class="screen__scroller screen__scroller--up screen__scroller--hidden js-map-scroller" data-direction="up" type="button" aria-label="Скроллить вверх">
+          <svg width="25" height="15" fill="none">
+            <use xlink:href="img/sprite_auto.svg#arr-prev" />
+          </svg>
+        </button>
+        <button class="screen__scroller screen__scroller--down screen__scroller--hidden js-map-scroller" data-direction="down" type="button" aria-label="Скроллить вниз">
+          <svg width="25" height="15" fill="none">
+            <use xlink:href="img/sprite_auto.svg#arr-next" />
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="screen screen--hidden screen--tickets js-scrollspy" id="tickets">
+      <div class="screen__wrapper">
+        <div class="tickets-block js-tickets-block">
+          <h2 class="tickets-block__title"><span>купить билет</span></h2>
+          <form class="tickets-block__list" method="post">
+            <ul>
+              <li>
+                <label class="tickets-block__button btn btn--primary btn--medium js-date-picker" data-number="0">
+                  <input type="radio" class="visually-hidden" id="1304" name="datepicker">
+                  13.04 пн
+                </label>
+              </li>
+              <li>
+                <label class="tickets-block__button btn btn--primary btn--medium js-date-picker" data-number="1">
+                  <input type="radio" class="visually-hidden" id="1404" name="datepicker">
+                  14.04 вт
+                </label>
+              </li>
+              <li>
+                <label class="tickets-block__button btn btn--primary btn--medium js-date-picker" data-number="2">
+                  <input type="radio" class="visually-hidden" id="1504" name="datepicker">
+                  15.04 ср
+                </label>
+              </li>
+              <li>
+                <label class="tickets-block__button btn btn--primary btn--medium js-date-picker" data-number="3">
+                  <input type="radio" class="visually-hidden" id="1604" name="datepicker">
+                  16.04 чт
+                </label>
+              </li>
+              <li>
+                <label class="tickets-block__button btn btn--primary btn--medium js-date-picker" data-number="4">
+                  <input type="radio" class="visually-hidden" id="1704" name="datepicker">
+                  17.04 пт
+                </label>
+              </li>
+              <li>
+                <label class="tickets-block__button btn btn--primary btn--medium js-date-picker" data-number="5">
+                  <input type="radio" class="visually-hidden" id="1804" name="datepicker">
+                  18.04 сб
+                </label>
+              </li>
+              <li>
+                <label class="tickets-block__button btn btn--primary btn--medium js-date-picker" data-number="6">
+                  <input type="radio" class="visually-hidden" id="1904" name="datepicker">
+                  19.04 вс
+                </label>
+              </li>
+              <li>
+                <button class="tickets-block__button tickets-block__button--next btn btn--primary btn--medium js-pick js-show-form" disabled type="button">
+                  <svg width="42" height="25" fill="none">
+                    <use xlink:href="img/sprite_auto.svg#arr-next" />
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </form>
+          <form method="post" class="tickets-block__form">
+            <div class="tickets-block__slider swiper-container js-tickets-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide tickets-block__slide">
+                  <div class="tickets-form">
+                    <div class="tickets-form__row">
+                      <label for="adult-1304" class="tickets-form__label">
+                        <span>взрослый билет</span>
+                        <span>1400 р</span>
+                      </label>
+                      <div class="tickets-form__field js-field">
+                        <input  type="number" value="0" data-sum="1400" min="0" id="adult-1304" name="adult-1304">
+                        <button class="tickets-form__counter tickets-form__counter--decrease js-decrease js-counter" disabled type="button" aria-label="Уменьшить количество"><span>-</span></button>
+                        <button class="tickets-form__counter tickets-form__counter--increase js-increase js-counter" type="button" aria-label="Увеличить количество"><span>+</span></button>
+                      </div>
+                    </div>
+                    <div class="tickets-form__row">
+                      <label for="child-1304" class="tickets-form__label">
+                        <span>детский билет</span>
+                        <span>1000 р</span>
+                        <em>до 12 лет</em>
+                      </label>
+                      <div class="tickets-form__field js-field">
+                        <input  type="number" value="0" data-sum="1000"  min="0" id="child-1304" name="child-1304">
+                        <button class="tickets-form__counter tickets-form__counter--decrease js-decrease js-counter" disabled type="button" aria-label="Уменьшить количество"><span>-</span></button>
+                        <button class="tickets-form__counter tickets-form__counter--increase js-increase js-counter" type="button" aria-label="Увеличить количество"><span>+</span></button>
+                      </div>
+                    </div>
+                    <div class="tickets-form__row">
+                      <label for="group-1304" class="tickets-form__label">
+                        <span>групповой билет</span>
+                        <span>4800 р</span>
+                        <em>на группу из 4 человек</em>
+                      </label>
+                      <div class="tickets-form__field js-field">
+                        <input  type="number" value="0" data-sum="4800"  min="0" id="group-1304" name="group-1304">
+                        <button class="tickets-form__counter tickets-form__counter--decrease js-decrease js-counter" disabled type="button" aria-label="Уменьшить количество"><span>-</span></button>
+                        <button class="tickets-form__counter tickets-form__counter--increase js-increase js-counter" type="button" aria-label="Увеличить количество"><span>+</span></button>
+                      </div>
+                    </div>
+                    <div class="tickets-form__row tickets-form__row--disabled js-total-row">
+                      <p class="tickets-form__label">
+                        <span>итого</span>
+                        <span><span class="js-total">0</span> р</span>
+                      </p>
+                        <div class="tickets-form__button">
+                          <button class="tickets-form__submit btn btn--primary">
+                            <span>купить</span>
+                          </button>
+                          <div class="tickets-form__ticket">
+                            <div class="tickets-form__ticket_x">
+                              <div class="tickets-form__ticket_y">
+                                <include src="./page-parts/ticket.svg"></include>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  <div class="tickets-block__date">13.04 пн</div>
+                </div>
+
+                <div class="swiper-slide tickets-block__slide">
+                  <div class="tickets-form">
+                    <div class="tickets-form__row">
+                      <label for="adult-1404" class="tickets-form__label">
+                        <span>взрослый билет</span>
+                        <span>1400 р</span>
+                      </label>
+                      <div class="tickets-form__field js-field">
+                        <input  type="number" value="0" min="0" data-sum="1400" id="adult-1404" name="adult-1404">
+                        <button class="tickets-form__counter tickets-form__counter--decrease js-decrease js-counter" disabled type="button" aria-label="Уменьшить количество"><span>-</span></button>
+                        <button class="tickets-form__counter tickets-form__counter--increase js-increase js-counter" type="button" aria-label="Увеличить количество"><span>+</span></button>
+                      </div>
+                    </div>
+                    <div class="tickets-form__row">
+                      <label for="child-1404" class="tickets-form__label">
+                        <span>детский билет</span>
+                        <span>1000 р</span>
+                        <em>до 12 лет</em>
+                      </label>
+                      <div class="tickets-form__field js-field">
+                        <input  type="number" value="0" min="0" data-sum="1000" id="child-1404" name="child-1404">
+                        <button class="tickets-form__counter tickets-form__counter--decrease js-decrease js-counter" disabled type="button" aria-label="Уменьшить количество"><span>-</span></button>
+                        <button class="tickets-form__counter tickets-form__counter--increase js-increase js-counter" type="button" aria-label="Увеличить количество"><span>+</span></button>
+                      </div>
+                    </div>
+                    <div class="tickets-form__row">
+                      <label for="group-1404" class="tickets-form__label">
+                        <span>групповой билет</span>
+                        <span>4800 р</span>
+                        <em>на группу из 4 человек</em>
+                      </label>
+                      <div class="tickets-form__field js-field">
+                        <input  type="number" value="0" min="0" data-sum="4800" id="group-1404" name="group-1404">
+                        <button class="tickets-form__counter tickets-form__counter--decrease js-decrease js-counter" disabled type="button" aria-label="Уменьшить количество"><span>-</span></button>
+                        <button class="tickets-form__counter tickets-form__counter--increase js-increase js-counter" type="button" aria-label="Увеличить количество"><span>+</span></button>
+                      </div>
+                    </div>
+                    <div class="tickets-form__row tickets-form__row--disabled js-total-row">
+                      <p class="tickets-form__label">
+                        <span>итого</span>
+                        <span><span class="js-total">0</span> р</span>
+                      </p>
+                      <div class="tickets-form__button">
+                        <button class="tickets-form__submit btn btn--primary">
+                          <span>купить</span>
+                        </button>
+                        <div class="tickets-form__ticket">
+                          <div class="tickets-form__ticket_x">
+                            <div class="tickets-form__ticket_y">
+                              <include src="./page-parts/ticket.svg"></include>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tickets-block__date">14.04 пн</div>
+                </div>
+
+                <div class="swiper-slide tickets-block__slide">
+                  <div class="tickets-form">
+                    <div class="tickets-form__row">
+                      <label for="adult-1504" class="tickets-form__label">
+                        <span>взрослый билет</span>
+                        <span>1400 р</span>
+                      </label>
+                      <div class="tickets-form__field js-field">
+                        <input  type="number" value="0" min="0" data-sum="1400" id="adult-1504" name="adult-1504">
+                        <button class="tickets-form__counter tickets-form__counter--decrease js-decrease js-counter" disabled type="button" aria-label="Уменьшить количество"><span>-</span></button>
+                        <button class="tickets-form__counter tickets-form__counter--increase js-increase js-counter" type="button" aria-label="Увеличить количество"><span>+</span></button>
+                      </div>
+                    </div>
+                    <div class="tickets-form__row">
+                      <label for="child-1504" class="tickets-form__label">
+                        <span>детский билет</span>
+                        <span>1000 р</span>
+                        <em>до 12 лет</em>
+                      </label>
+                      <div class="tickets-form__field js-field">
+                        <input  type="number" value="0" min="0" data-sum="1000" id="child-1504" name="child-1504">
+                        <button class="tickets-form__counter tickets-form__counter--decrease js-decrease js-counter" disabled type="button" aria-label="Уменьшить количество"><span>-</span></button>
+                        <button class="tickets-form__counter tickets-form__counter--increase js-increase js-counter" type="button" aria-label="Увеличить количество"><span>+</span></button>
+                      </div>
+                    </div>
+                    <div class="tickets-form__row">
+                      <label for="group-1504" class="tickets-form__label">
+                        <span>групповой билет</span>
+                        <span>4800 р</span>
+                        <em>на группу из 4 человек</em>
+                      </label>
+                      <div class="tickets-form__field js-field">
+                        <input  type="number" value="0" min="0" data-sum="4800" id="group-1504" name="group-1504">
+                        <button class="tickets-form__counter tickets-form__counter--decrease js-decrease js-counter" disabled type="button" aria-label="Уменьшить количество"><span>-</span></button>
+                        <button class="tickets-form__counter tickets-form__counter--increase js-increase js-counter" type="button" aria-label="Увеличить количество"><span>+</span></button>
+                      </div>
+                    </div>
+                    <div class="tickets-form__row tickets-form__row--disabled js-total-row">
+                      <p class="tickets-form__label">
+                        <span>итого</span>
+                        <span><span class="js-total">0</span> р</span>
+                      </p>
+                      <div class="tickets-form__button">
+                        <button class="tickets-form__submit btn btn--primary">
+                          <span>купить</span>
+                        </button>
+                        <div class="tickets-form__ticket">
+                          <div class="tickets-form__ticket_x">
+                            <div class="tickets-form__ticket_y">
+                              <include src="./page-parts/ticket.svg"></include>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tickets-block__date">15.04 пн</div>
+                </div>
+
+                <div class="swiper-slide tickets-block__slide">
+                  <div class="tickets-form">
+                    <div class="tickets-form__row">
+                      <label for="adult-1604" class="tickets-form__label">
+                        <span>взрослый билет</span>
+                        <span>1400 р</span>
+                      </label>
+                      <div class="tickets-form__field js-field">
+                        <input  type="number" value="0" min="0" data-sum="1400" id="adult-1604" name="adult-1604">
+                        <button class="tickets-form__counter tickets-form__counter--decrease js-decrease js-counter" disabled type="button" aria-label="Уменьшить количество"><span>-</span></button>
+                        <button class="tickets-form__counter tickets-form__counter--increase js-increase js-counter" type="button" aria-label="Увеличить количество"><span>+</span></button>
+                      </div>
+                    </div>
+                    <div class="tickets-form__row">
+                      <label for="child-1604" class="tickets-form__label">
+                        <span>детский билет</span>
+                        <span>1000 р</span>
+                        <em>до 12 лет</em>
+                      </label>
+                      <div class="tickets-form__field js-field">
+                        <input  type="number" value="0" min="0" data-sum="1000" id="child-1604" name="child-1604">
+                        <button class="tickets-form__counter tickets-form__counter--decrease js-decrease js-counter" disabled type="button" aria-label="Уменьшить количество"><span>-</span></button>
+                        <button class="tickets-form__counter tickets-form__counter--increase js-increase js-counter" type="button" aria-label="Увеличить количество"><span>+</span></button>
+                      </div>
+                    </div>
+                    <div class="tickets-form__row">
+                      <label for="group-1604" class="tickets-form__label">
+                        <span>групповой билет</span>
+                        <span>4800 р</span>
+                        <em>на группу из 4 человек</em>
+                      </label>
+                      <div class="tickets-form__field js-field">
+                        <input  type="number" value="0" min="0" data-sum="4800" id="group-1604" name="group-1604">
+                        <button class="tickets-form__counter tickets-form__counter--decrease js-decrease js-counter" disabled type="button" aria-label="Уменьшить количество"><span>-</span></button>
+                        <button class="tickets-form__counter tickets-form__counter--increase js-increase js-counter" type="button" aria-label="Увеличить количество"><span>+</span></button>
+                      </div>
+                    </div>
+                    <div class="tickets-form__row tickets-form__row--disabled js-total-row">
+                      <p class="tickets-form__label">
+                        <span>итого</span>
+                        <span><span class="js-total">0</span> р</span>
+                      </p>
+                      <div class="tickets-form__button">
+                        <button class="tickets-form__submit btn btn--primary">
+                          <span>купить</span>
+                        </button>
+                        <div class="tickets-form__ticket">
+                          <div class="tickets-form__ticket_x">
+                            <div class="tickets-form__ticket_y">
+                              <include src="./page-parts/ticket.svg"></include>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tickets-block__date">16.04 пн</div>
+                </div>
+
+                <div class="swiper-slide tickets-block__slide">
+                  <div class="tickets-form">
+                    <div class="tickets-form__row">
+                      <label for="adult-1704" class="tickets-form__label">
+                        <span>взрослый билет</span>
+                        <span>1400 р</span>
+                      </label>
+                      <div class="tickets-form__field js-field">
+                        <input  type="number" value="0" min="0" data-sum="1400" id="adult-1704" name="adult-1704">
+                        <button class="tickets-form__counter tickets-form__counter--decrease js-decrease js-counter" disabled type="button" aria-label="Уменьшить количество"><span>-</span></button>
+                        <button class="tickets-form__counter tickets-form__counter--increase js-increase js-counter" type="button" aria-label="Увеличить количество"><span>+</span></button>
+                      </div>
+                    </div>
+                    <div class="tickets-form__row">
+                      <label for="child-1704" class="tickets-form__label">
+                        <span>детский билет</span>
+                        <span>1000 р</span>
+                        <em>до 12 лет</em>
+                      </label>
+                      <div class="tickets-form__field js-field">
+                        <input  type="number" value="0" min="0" data-sum="1000" id="child-1704" name="child-1704">
+                        <button class="tickets-form__counter tickets-form__counter--decrease js-decrease js-counter" disabled type="button" aria-label="Уменьшить количество"><span>-</span></button>
+                        <button class="tickets-form__counter tickets-form__counter--increase js-increase js-counter" type="button" aria-label="Увеличить количество"><span>+</span></button>
+                      </div>
+                    </div>
+                    <div class="tickets-form__row">
+                      <label for="group-1704" class="tickets-form__label">
+                        <span>групповой билет</span>
+                        <span>4800 р</span>
+                        <em>на группу из 4 человек</em>
+                      </label>
+                      <div class="tickets-form__field js-field">
+                        <input  type="number" value="0" min="0" data-sum="4800" id="group-1704" name="group-1704">
+                        <button class="tickets-form__counter tickets-form__counter--decrease js-decrease js-counter" disabled type="button" aria-label="Уменьшить количество"><span>-</span></button>
+                        <button class="tickets-form__counter tickets-form__counter--increase js-increase js-counter" type="button" aria-label="Увеличить количество"><span>+</span></button>
+                      </div>
+                    </div>
+                    <div class="tickets-form__row tickets-form__row--disabled js-total-row">
+                      <p class="tickets-form__label">
+                        <span>итого</span>
+                        <span><span class="js-total">0</span> р</span>
+                      </p>
+                      <div class="tickets-form__button">
+                        <button class="tickets-form__submit btn btn--primary">
+                          <span>купить</span>
+                        </button>
+                        <div class="tickets-form__ticket">
+                          <div class="tickets-form__ticket_x">
+                            <div class="tickets-form__ticket_y">
+                              <include src="./page-parts/ticket.svg"></include>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tickets-block__date">17.04 пн</div>
+                </div>
+
+                <div class="swiper-slide tickets-block__slide">
+                  <div class="tickets-form">
+                    <div class="tickets-form__row">
+                      <label for="adult-1804" class="tickets-form__label">
+                        <span>взрослый билет</span>
+                        <span>1400 р</span>
+                      </label>
+                      <div class="tickets-form__field js-field">
+                        <input  type="number" value="0" min="0" data-sum="1400" id="adult-1804" name="adult-1804">
+                        <button class="tickets-form__counter tickets-form__counter--decrease js-decrease js-counter" disabled type="button" aria-label="Уменьшить количество"><span>-</span></button>
+                        <button class="tickets-form__counter tickets-form__counter--increase js-increase js-counter" type="button" aria-label="Увеличить количество"><span>+</span></button>
+                      </div>
+                    </div>
+                    <div class="tickets-form__row">
+                      <label for="child-1804" class="tickets-form__label">
+                        <span>детский билет</span>
+                        <span>1000 р</span>
+                        <em>до 12 лет</em>
+                      </label>
+                      <div class="tickets-form__field js-field">
+                        <input  type="number" value="0" min="0" data-sum="1000" id="child-1804" name="child-1804">
+                        <button class="tickets-form__counter tickets-form__counter--decrease js-decrease js-counter" disabled type="button" aria-label="Уменьшить количество"><span>-</span></button>
+                        <button class="tickets-form__counter tickets-form__counter--increase js-increase js-counter" type="button" aria-label="Увеличить количество"><span>+</span></button>
+                      </div>
+                    </div>
+                    <div class="tickets-form__row">
+                      <label for="group-1804" class="tickets-form__label">
+                        <span>групповой билет</span>
+                        <span>4800 р</span>
+                        <em>на группу из 4 человек</em>
+                      </label>
+                      <div class="tickets-form__field js-field">
+                        <input  type="number" value="0" min="0" data-sum="4800" id="group-1804" name="group-1804">
+                        <button class="tickets-form__counter tickets-form__counter--decrease js-decrease js-counter" disabled type="button" aria-label="Уменьшить количество"><span>-</span></button>
+                        <button class="tickets-form__counter tickets-form__counter--increase js-increase js-counter" type="button" aria-label="Увеличить количество"><span>+</span></button>
+                      </div>
+                    </div>
+                    <div class="tickets-form__row tickets-form__row--disabled js-total-row">
+                      <p class="tickets-form__label">
+                        <span>итого</span>
+                        <span><span class="js-total">0</span> р</span>
+                      </p>
+                      <div class="tickets-form__button">
+                        <button class="tickets-form__submit btn btn--primary">
+                          <span>купить</span>
+                        </button>
+                        <div class="tickets-form__ticket">
+                          <div class="tickets-form__ticket_x">
+                            <div class="tickets-form__ticket_y">
+                              <include src="./page-parts/ticket.svg"></include>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tickets-block__date">18.04 пн</div>
+                </div>
+
+                <div class="swiper-slide tickets-block__slide">
+                  <div class="tickets-form">
+                    <div class="tickets-form__row">
+                      <label for="adult-1904" class="tickets-form__label">
+                        <span>взрослый билет</span>
+                        <span>1400 р</span>
+                      </label>
+                      <div class="tickets-form__field js-field">
+                        <input  type="number" value="0" min="0" data-sum="1400" id="adult-1904" name="adult-1904">
+                        <button class="tickets-form__counter tickets-form__counter--decrease js-decrease js-counter" disabled type="button" aria-label="Уменьшить количество"><span>-</span></button>
+                        <button class="tickets-form__counter tickets-form__counter--increase js-increase js-counter" type="button" aria-label="Увеличить количество"><span>+</span></button>
+                      </div>
+                    </div>
+                    <div class="tickets-form__row">
+                      <label for="child-1904" class="tickets-form__label">
+                        <span>детский билет</span>
+                        <span>1000 р</span>
+                        <em>до 12 лет</em>
+                      </label>
+                      <div class="tickets-form__field js-field">
+                        <input  type="number" value="0" min="0" data-sum="1000" id="child-1904" name="child-1904">
+                        <button class="tickets-form__counter tickets-form__counter--decrease js-decrease js-counter" disabled type="button" aria-label="Уменьшить количество"><span>-</span></button>
+                        <button class="tickets-form__counter tickets-form__counter--increase js-increase js-counter" type="button" aria-label="Увеличить количество"><span>+</span></button>
+                      </div>
+                    </div>
+                    <div class="tickets-form__row">
+                      <label for="group-1904" class="tickets-form__label">
+                        <span>групповой билет</span>
+                        <span>4800 р</span>
+                        <em>на группу из 4 человек</em>
+                      </label>
+                      <div class="tickets-form__field js-field">
+                        <input type="number" min="0" value="0" data-sum="4800" id="group-1904" name="group-1904">
+                        <button class="tickets-form__counter tickets-form__counter--decrease js-decrease js-counter" disabled type="button" aria-label="Уменьшить количество"><span>-</span></button>
+                        <button class="tickets-form__counter tickets-form__counter--increase js-increase js-counter" type="button" aria-label="Увеличить количество"><span>+</span></button>
+                      </div>
+                    </div>
+                    <div class="tickets-form__row tickets-form__row--disabled js-total-row">
+                      <p class="tickets-form__label">
+                        <span>итого</span>
+                        <span><span class="js-total">0</span> р</span>
+                      </p>
+                      <div class="tickets-form__button">
+                        <button class="tickets-form__submit btn btn--primary">
+                          <span>купить</span>
+                        </button>
+                        <div class="tickets-form__ticket">
+                          <div class="tickets-form__ticket_x">
+                            <div class="tickets-form__ticket_y">
+                              <include src="./page-parts/ticket.svg"></include>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tickets-block__date">19.04 пн</div>
+                </div>
+
+              </div>
+              <div class="tickets-block__controls">
+                <button class="tickets-block__control tickets-block__control--prev swiper-button-prev" type="button" aria-label="Перейти к предыдущему слайду">
+                  <svg width="42" height="25" fill="none">
+                    <use xlink:href="img/sprite_auto.svg#arr-prev" />
+                  </svg>
+                </button>
+                <button class="tickets-block__control tickets-block__control--next swiper-button-next" type="button" aria-label="Перейти к следующему слайду">
+                  <svg width="42" height="25" fill="none">
+                    <use xlink:href="img/sprite_auto.svg#arr-next" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <section>
+    <h2 class="visually-hidden">Модальные окна</h2>
+    <div class="modal js-modal" id="main-scene">
+      <div class="modal__overlay"></div>
+      <div class="modal__window">
+        <button class="modal__close js-modal-close" data-target="main-scene" type="button" aria-label="Закрыть окно">
+          <svg width="14" height="14">
+            <use xlink:href="img/sprite_auto.svg#cross"/>
+          </svg>
+        </button>
+        <div class="modal__content">
+          <div class="modal__block">
+            <div class="modal__block-header">
+              <span>13.04</span>
+              <span>пн</span>
+            </div>
+            <div class="modal__block-event">
+              <p><b>мастер-класс</b>фокусы с&nbsp;картами и&nbsp;мелкими предметами</span></p>
+            </div>
+            <div class="modal__block-event">
+              <p><b>мастер-класс</b>актерское мастерство для&nbsp;фокусника</span></p>
+            </div>
+          </div>
+          <div class="modal__block">
+            <div class="modal__block-header">
+              <span>18.04</span>
+              <span>сб</span>
+            </div>
+            <div class="modal__block-event">
+              <p><b>мастер-класс</b>фокусы с&nbsp;картами и&nbsp;мелкими предметами</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__button">
+          <a href="#tickets" class="btn btn--primary btn--medium js-modal-close" data-target="main-scene"><span>купить билет</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="modal js-modal" id="tent1">
+      <div class="modal__overlay"></div>
+      <div class="modal__window">
+        <button class="modal__close js-modal-close" data-target="tent1" type="button" aria-label="Закрыть окно">
+          <svg width="14" height="14">
+            <use xlink:href="img/sprite_auto.svg#cross"/>
+          </svg>
+        </button>
+        <div class="modal__content">
+          <div class="modal__block">
+            <div class="modal__block-header">
+              <span>13.04</span>
+              <span>пн</span>
+            </div>
+            <div class="modal__block-event">
+              <p><b>мастер-класс</b>фокусы с&nbsp;картами и&nbsp;мелкими предметами</span></p>
+            </div>
+            <div class="modal__block-event">
+              <p><b>мастер-класс</b>актерское мастерство для&nbsp;фокусника</span></p>
+            </div>
+          </div>
+          <div class="modal__block">
+            <div class="modal__block-header">
+              <span>18.04</span>
+              <span>сб</span>
+            </div>
+            <div class="modal__block-event">
+              <p><b>мастер-класс</b>фокусы с&nbsp;картами и&nbsp;мелкими предметами</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__button">
+          <a href="#tickets" class="btn btn--primary btn--medium js-modal-close" data-target="tent1"><span>купить билет</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="modal js-modal" id="tent2">
+      <div class="modal__overlay"></div>
+      <div class="modal__window">
+        <button class="modal__close js-modal-close" data-target="tent2" type="button" aria-label="Закрыть окно">
+          <svg width="14" height="14">
+            <use xlink:href="img/sprite_auto.svg#cross"/>
+          </svg>
+        </button>
+        <div class="modal__content">
+          <div class="modal__block">
+            <div class="modal__block-header">
+              <span>13.04</span>
+              <span>пн</span>
+            </div>
+            <div class="modal__block-event">
+              <p><b>мастер-класс</b>фокусы с&nbsp;картами и&nbsp;мелкими предметами</span></p>
+            </div>
+            <div class="modal__block-event">
+              <p><b>мастер-класс</b>актерское мастерство для&nbsp;фокусника</span></p>
+            </div>
+          </div>
+          <div class="modal__block">
+            <div class="modal__block-header">
+              <span>18.04</span>
+              <span>сб</span>
+            </div>
+            <div class="modal__block-event">
+              <p><b>мастер-класс</b>фокусы с&nbsp;картами и&nbsp;мелкими предметами</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__button">
+          <a href="#tickets" class="btn btn--primary btn--medium js-modal-close" data-target="tent2"><span>купить билет</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="modal js-modal" id="tent3">
+      <div class="modal__overlay"></div>
+      <div class="modal__window">
+        <button class="modal__close js-modal-close" data-target="tent3" type="button" aria-label="Закрыть окно">
+          <svg width="14" height="14">
+            <use xlink:href="img/sprite_auto.svg#cross"/>
+          </svg>
+        </button>
+        <div class="modal__content">
+          <div class="modal__block">
+            <div class="modal__block-header">
+              <span>13.04</span>
+              <span>пн</span>
+            </div>
+            <div class="modal__block-event">
+              <p><b>мастер-класс</b>фокусы с&nbsp;картами и&nbsp;мелкими предметами</span></p>
+            </div>
+            <div class="modal__block-event">
+              <p><b>мастер-класс</b>актерское мастерство для&nbsp;фокусника</span></p>
+            </div>
+          </div>
+          <div class="modal__block">
+            <div class="modal__block-header">
+              <span>18.04</span>
+              <span>сб</span>
+            </div>
+            <div class="modal__block-event">
+              <p><b>мастер-класс</b>фокусы с&nbsp;картами и&nbsp;мелкими предметами</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__button">
+          <a href="#tickets" class="btn btn--primary btn--medium js-modal-close" data-target="tent3"><span>купить билет</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="modal js-modal" id="tent4">
+      <div class="modal__overlay"></div>
+      <div class="modal__window">
+        <button class="modal__close js-modal-close" data-target="tent4" type="button" aria-label="Закрыть окно">
+          <svg width="14" height="14">
+            <use xlink:href="img/sprite_auto.svg#cross"/>
+          </svg>
+        </button>
+        <div class="modal__content">
+          <div class="modal__block">
+            <div class="modal__block-header">
+              <span>13.04</span>
+              <span>пн</span>
+            </div>
+            <div class="modal__block-event">
+              <p><b>мастер-класс</b>фокусы с&nbsp;картами и&nbsp;мелкими предметами</span></p>
+            </div>
+            <div class="modal__block-event">
+              <p><b>мастер-класс</b>актерское мастерство для&nbsp;фокусника</span></p>
+            </div>
+          </div>
+          <div class="modal__block">
+            <div class="modal__block-header">
+              <span>18.04</span>
+              <span>сб</span>
+            </div>
+            <div class="modal__block-event">
+              <p><b>мастер-класс</b>фокусы с&nbsp;картами и&nbsp;мелкими предметами</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="modal__button">
+          <a href="#tickets" class="btn btn--primary btn--medium js-modal-close" data-target="tent4"><span>купить билет</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+.social-btn {
+  @include btn-reset;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 7rem;
+  height: 7rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: inherit;
+  color: inherit;
+
+  @media (min-width: $stop-scaling) {
+    min-width: 70px;
+    height: 70px;
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    min-width: 4rem;
+    height: 4rem;
+    font-size: 1.8rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -0.6rem;
+    left: -0.6rem;
+    right: -0.6rem;
+    bottom: -0.6rem;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    transform: scale(0.921);
+
+    @media (min-width: $stop-scaling) {
+      top: -6px;
+      left: -6px;
+      right: -6px;
+      bottom: -6px;
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      display: none;
+    }
+  }
+
+  svg {
+    display: block;
+    max-width: 2.4rem;
+
+    @media (min-width: $stop-scaling) {
+      max-width: 24px;
+    }
+  }
+
+  &:hover {
+    color: var(--purple);
+
+    .last-section & {
+      color: var(--light);
+    }
+
+    .page-header--menu-opened & {
+      color: var(--purple);
+    }
+  }
+
+  &:active {
+    color: var(--purple);
+    outline: none;
+
+    &::after {
+      border-color: currentColor;
+      transform: scale(1);
+    }
+
+    .last-section & {
+      color: var(--light);
+    }
+  }
+
+  &:focus {
+    color: var(--purple);
+    outline: none;
+
+    &::after {
+      border-color: currentColor;
+    }
+
+    .last-section & {
+      color: var(--light);
+    }
+  }
+}
+

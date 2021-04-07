@@ -1,0 +1,33 @@
+.animation-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    padding-bottom: 1.5rem;
+  }
+
+  img {
+    width: 136rem;
+    height: auto;
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: contain;
+    object-position: center;
+
+    @media (min-width: $stop-scaling) {
+      width: 1360px;
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      max-height: 100vh;
+    }
+  }
+}
+

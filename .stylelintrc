@@ -1,0 +1,19 @@
+{
+  "extends": "stylelint-config-htmlacademy",
+  "rules": {
+    "declaration-no-important": true,
+    "indentation": [2, {"ignore": ["inside-parens"]}],
+    "unit-whitelist": ["px", "em", "deg", "rem", "vh", "vw", "%", "s", "ms", "dpi", "dppx"],
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": [
+        "mixin",
+        "define-mixin",
+        "include",
+        "content",
+        "rules",
+        "for",
+        "each"
+      ]
+    }],
+  }
+}

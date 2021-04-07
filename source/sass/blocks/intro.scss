@@ -1,0 +1,142 @@
+.intro {
+  padding: 3.5rem 0;
+
+  @media (min-width: $stop-scaling) {
+    padding: 35px 0;
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    padding: 1rem 0;
+  }
+}
+
+
+.intro__title {
+  margin: 0;
+  max-width: 54.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 3.6rem;
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    max-width: 100%;
+    font-size: 2.4rem;
+  }
+}
+
+
+.intro__title .slogan__word {
+  margin: 0 5px;
+}
+
+
+.intro__title-name {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+
+  @media (min-width: $stop-scaling) {
+    margin-top: 5px;
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    margin-top: 0.3rem;
+  }
+}
+
+
+.intro__title-line {
+  position: relative;
+  display: block;
+  margin-right: 1.3rem;
+  width: 21.4rem;
+  color: var(--purple);
+  margin-left: 12px;
+  margin-top: 6px;
+
+
+  height: 3.6rem;
+  float: left;
+
+  @media (min-width: $stop-scaling) {
+    margin-right: 13px;
+    width: 214px;
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    margin-right: 0;
+    width: 5rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 1px;
+    background-color: var(--light);
+    z-index: 1;
+    width: 0;
+
+    @media (min-width: $stop-scaling) {
+      width: 199px;
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      width: 4.5rem;
+    }
+  }
+
+  &.active::before {
+    width: 93%;
+  }
+
+  svg {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 3.1rem;
+    height: 3.1rem;
+
+    @media (min-width: $stop-scaling) {
+      width: 31px;
+      height: 31px;
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      display: none;
+    }
+  }
+}
+
+
+.intro__scroll-link {
+  position: absolute;
+  right: 0;
+  bottom: 1rem;
+  display: none;
+  width: 4rem;
+  height: 4rem;
+  color: var(--light);
+  cursor: default;
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    display: block;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      width: 1.7rem;
+      height: 2.8rem;
+    }
+  }
+}
+

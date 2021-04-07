@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-7 -1 73 16">
+  <g>
+    <path d="M12.89,14.1H48.05" fill="none" stroke="#fff" stroke-miterlimit="10"/>
+  </g>
+  <path id="cloudTwo"
+        d="M0,8.63H17.86a8.63,8.63,0,0,1,17.27,0H57.75" fill="none" stroke="#fff"
+        stroke-miterlimit="10"/>
+</svg>

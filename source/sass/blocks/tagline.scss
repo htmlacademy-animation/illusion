@@ -1,0 +1,116 @@
+.slogan {
+  margin: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  max-width: 98rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  font-size: 5.6rem;
+  line-height: 1.1;
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: $stop-scaling) {
+    padding-top: 115px;
+    max-width: 960px;
+    font-size: 56px;
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    width: 100%;
+    max-width: 34rem;
+    text-align: left;
+    font-size: 2.4rem;
+    padding-bottom: 1em;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (max-width: $tablet - 1) and (orientation: landscape) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    font-size: 2.4rem;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+
+.slogan__col {
+  display: block;
+
+  &--1 {
+    width: 75%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    max-width: 24rem;
+    margin: 0 auto;
+
+    &--1 {
+      transform: translateX(4rem);
+    }
+
+    &--2 {
+      transform: translateX(-1rem);
+    }
+
+    &--3 {
+      text-align: right;
+      transform: translateX(3rem);
+    }
+  }
+
+  @media (max-width: $tablet - 1) and (orientation: landscape) {
+    max-width: 24rem;
+    margin: 0 auto;
+
+    &--1 {
+      text-align: left;
+      transform: translateX(5rem);
+    }
+
+    &--2 {
+      transform: translateX(-5rem);
+    }
+
+    &--3 {
+      text-align: right;
+      transform: translateX(5rem);
+    }
+  }
+}
+
+
+.slogan__word {
+  overflow: hidden;
+  display: inline-block;
+  padding-top: 4px;
+  vertical-align: bottom;
+  white-space: nowrap;
+
+  span {
+    display: inline-block;
+    transform: translateY(100%);
+
+    .accent-typography--active & {
+      transform: translateY(0);
+    }
+  }
+}
