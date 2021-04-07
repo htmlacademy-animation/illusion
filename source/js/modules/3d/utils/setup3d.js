@@ -12,7 +12,7 @@ export const setup3d = (initialWidth = 100, initialHeight = 100, far = 100) => {
 
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(initialWidth, initialHeight);
-  renderer.setClearColor(0x333333);
+  renderer.setClearColor(0x000000);
 
   //
   // 1.1.2. Scene

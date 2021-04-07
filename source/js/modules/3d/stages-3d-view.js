@@ -63,6 +63,20 @@ const createLightSources = () => {
     };
 };
 
+const addCameraRigToViewObject = (viewObject, rig) => {
+  const {camera, scene} = viewObject;
+
+  // Сбрасываем коортинаты камеры,
+  // чтобы положение камеры полностью определялось ригом
+  camera.position.set(0, 0, 0);
+
+  scene.add(rig.root);
+  rig.cameraNull.add(camera);
+
+  viewObject.cameraRig = rig;
+
+  return rig;
+};
 
 class Stages3DView extends AbstractView {
   setupParameters(params) {
@@ -131,6 +145,8 @@ class Stages3DView extends AbstractView {
 
   installAddOn(config) {
     this.addOn = config;
+
+    if (config.rig) addCameraRigToViewObject(this, config.rig);
   }
 
   async load() {
