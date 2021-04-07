@@ -123,7 +123,33 @@
 
   &:hover {
     .main-menu__toggler-line {
+      &::before {
+        @media (min-width: $stop-scaling) {
+          transform: translate(-5px, -30%);
+        }
 
+        @media (min-width: $tablet + 1) and (orientation: portrait) {
+          transform: translate(-0.5rem, -30%);
+        }
+
+        @media (min-width: $tablet) and (orientation: landscape) {
+          transform: translate(-0.5rem, -30%);
+        }
+      }
+
+      &::after {
+        @media (min-width: $stop-scaling) {
+          transform: translate(5px, -65%);
+        }
+
+        @media (min-width: $tablet + 1) and (orientation: portrait) {
+          transform: translate(0.5rem, -65%);
+        }
+
+        @media (min-width: $tablet) and (orientation: landscape) {
+          transform: translate(0.5rem, -65%);
+        }
+      }
     }
   }
 

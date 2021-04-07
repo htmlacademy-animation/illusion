@@ -1,0 +1,386 @@
+.features-list {
+  &__item-feature {
+    transition: opacity 0.2s ease;
+  }
+
+  &__item-value {
+    transition: opacity 0.2s ease;
+  }
+
+  &.active {
+    .features-list__item {
+      &:nth-child(2) {
+        .features-list__item-feature,
+        .features-list__item-value {
+          transition-delay: 0.2s;
+        }
+      }
+      &:nth-child(3) {
+        .features-list__item-feature,
+        .features-list__item-value {
+          transition-delay: 0.3s;
+        }
+      }
+      &:nth-child(4) {
+        .features-list__item-feature,
+        .features-list__item-value {
+          transition-delay: 0.4s;
+        }
+      }
+      &:nth-child(5) {
+        .features-list__item-feature,
+        .features-list__item-value {
+          transition-delay: 0.55s;
+        }
+      }
+    }
+  }
+}
+
+
+.intro__title-line {
+  &::before {
+    transition: width 0.5s ease;
+  }
+}
+
+
+.main-menu {
+  transition: color 0.2s ease;
+}
+
+
+.main-menu--opened {
+  transition: opacity 0.15s ease;
+
+  &::before {
+    transition: transform 0.45s ease 0.15s;
+  }
+}
+
+
+.main-menu--opened-out {
+  .main-menu__link-text {
+    .slogan__word span {
+      transition: opacity 0.3s ease;
+    }
+  }
+
+  .main-menu__link-icon {
+    transition: opacity 0.3s ease;
+  }
+}
+
+
+.main-menu--opened.main-menu--active {
+  &::before {
+    transition: transform 0.35s ease;
+  }
+
+  .main-menu__link-icon {
+    transition: opacity 0.3s ease 0.25s;
+  }
+}
+
+
+.main-menu__link {
+  transition: color 0.3s ease;
+}
+
+
+.main-menu__link {
+  &::before {
+    transition: opacity 0.2s ease;
+  }
+
+  svg {
+    transition: opacity 0.2s ease;
+  }
+}
+
+
+.main-menu__link-text {
+  transition: opacity 0.2s ease;
+}
+
+
+.main-menu__logo {
+  transition: opacity 0.3s ease;
+}
+
+
+.main-menu__social {
+  @media (max-width: $tablet) and (orientation: portrait) {
+    transition: opacity 0.2s ease;
+  }
+
+  @media (max-width: $tablet - 1) and (orientation: landscape) {
+    transition: opacity 0.2s ease;
+  }
+}
+
+
+.main-menu__toggler-line {
+  &,
+  &::before,
+  &::after {
+    transition: transform 0.3s ease;
+  }
+}
+
+
+.main-menu.main-menu--opened .main-menu__link path {
+  transition: none;
+}
+
+
+.show__link {
+  transition: opacity 0.3s ease;
+
+  .screen--show.active & {
+    transition-delay: 0.25s;
+
+    span::before {
+      transition: transform 0.3s cubic-bezier(0.34, 0, 0.2, 1) 0.45s;
+    }
+  }
+}
+
+.show__date {
+  transition: opacity 0.3s ease;
+
+  .screen--show.active & {
+    transition-delay: 0.25s;
+  }
+}
+
+.map__place {
+  span {
+    transition: opacity 0.3s ease;
+  }
+}
+
+
+.map__info {
+  svg {
+    transition: transform 0.3s ease;
+  }
+
+  path {
+    transition: transform 1s cubic-bezier(0.16, 0.12, 0, 1.08);
+  }
+
+  span {
+    transition: opacity 0.3s ease;
+  }
+}
+
+
+.map__event {
+  transition: all 0.3s ease;
+
+  &::before {
+    transition: all 0.3s ease;
+  }
+
+  span {
+    transition: opacity 0.3s ease;
+  }
+}
+
+
+.modal {
+  transition: opacity 0.2s ease;
+}
+
+
+.modal__window,
+.modal__content {
+  transition: transform 0.55s cubic-bezier(0.37, 0, 0.13, 1);
+}
+
+
+.modal__content {
+  transition-duration: 0.6s;
+}
+
+
+.modal__block-event {
+  transition: transform 0.85s cubic-bezier(0.17, 0, 0.13, 1);
+}
+
+
+.page-header {
+  transition: color 0.3s ease;
+}
+
+
+.page-header__period {
+  transition: color 0.3s ease;
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    transition-property: color, opacity;
+  }
+
+  @media (max-width: $tablet - 1) and (orientation: landscape) {
+    transition-property: color, opacity;
+  }
+}
+
+
+.page-header__cart .btn {
+  transition: color 0.3s ease;
+}
+
+
+.page-header__logo {
+  transition: opacity 0.5s ease;
+}
+
+
+.page-header__cart {
+  &-number {
+    transition: opacity 0.3s ease;
+  }
+
+  .eye_apple,
+  .upper_eyelid {
+    transition: opacity 0.01s ease 0.3s;
+  }
+}
+
+
+.screen {
+  transition: opacity 0.7s ease;
+}
+
+
+.screen__scroller {
+  transition: all 0.3s ease;
+}
+
+
+.screen--hidden,
+.screen--deactivated {
+  .whiff {
+    transition: opacity 0.5s ease;
+  }
+}
+
+.tickets-block__control,
+.slider__control {
+  transition: color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+
+  &::before {
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  svg {
+    transition: transform 0.2s ease;
+  }
+}
+
+.screen--mc.active .slider__control {
+  transition: color 0.2s ease, transform 0.5s ease 0.55s, opacity 0.5s ease 0.55s;
+}
+
+.screen--tickets.active .tickets-block--form-opened .tickets-block__control {
+  transition: color 0.2s ease, transform 0.5s ease 0.15s, opacity 0.5s ease 0.15s;
+}
+
+.tickets-block--form-opened {
+  .tickets-block__form {
+    transition: opacity 0.8s ease;
+  }
+}
+
+
+.slider__pagination {
+  transition: opacity 0.3s ease, transform 0s ease 0.3s;
+
+  .screen--mc.active & {
+    transition: opacity 0.5s ease 0.25s, transform 0.5s ease 0.25s;
+  }
+}
+
+
+.swiper-slide {
+  .slogan__word span {
+    transition: none;
+  }
+}
+
+
+.swiper-wrapper {
+  transition-timing-function: cubic-bezier(0.37, 0, 0.13, 1);
+
+  &.slider__el {
+    // Функция, максимально замедляющая начало движения списков на слайдах, пока они не скроются через прозрачность
+    transition-timing-function: cubic-bezier(1, 0, 1, 0.62);
+  }
+
+  &.active {
+    .swiper-slide {
+      transition: opacity 0.15s ease;
+    }
+
+    .swiper-slide:not(.swiper-slide-active) {
+      opacity: 0;
+    }
+  }
+}
+
+
+.swiper-slide {
+  .slogan__word span {
+    transition: none;
+  }
+}
+
+
+.tickets-block__button {
+  &--next {
+    transition: opacity 0.3s ease, transform 0.55s ease;
+
+    &:hover {
+      transition: transform 0.25s cubic-bezier(0.23, 0, 0.7, 1);
+    }
+  }
+}
+
+
+.tickets-form__counter {
+  &::before {
+    transition: transform 0.2s ease;
+  }
+}
+
+
+.btn {
+  &::before,
+  &::after {
+    transition-duration: 0.2s;
+    transition-property: top, bottom, left, right, border-color;
+  }
+}
+
+
+.social-btn {
+  transition: color 0.55s ease;
+}
+
+.social-btn:hover {
+  transition-duration: 0.3s;
+}
+
+.social-btn {
+  &::after {
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-property: border-color, transform;
+  }
+}
+
+.whiff {
+  transition: opacity 0.5s ease;
+}
