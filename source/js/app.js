@@ -4,6 +4,7 @@ import {Menu, Slider, ModalTriggers, TicketsSlider, Scrollers} from './modules/p
 import FullPageScroll  from './modules/full-page-scroll';
 import Poster          from './modules/poster-canvas-animation';
 import WhaleScene      from './modules/whale-canvas-animation';
+import ThreeBackground from './modules/3d';
 import AnimatedCart    from './modules/animated-cart';
 
 
@@ -23,6 +24,9 @@ class App {
     this.poster.drawBg();
 
     this.fullPageScroll = new FullPageScroll(this);
+
+    this.view3d = new ThreeBackground();
+    this.view3d.start();
 
     this.whaleScene = new WhaleScene({
       canvas: `#whale-canvas`
