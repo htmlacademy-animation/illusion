@@ -1,5 +1,19 @@
+import AccentTypographyBuild from './accent-typography-builder';
+
 export default class PageSwitchHandler {
   constructor(app) {
+    const animationTopScreenTextLine1 = new AccentTypographyBuild(`.slogan__col--1`, 500, `accent-typography--active`, `transform`);
+    const animationTopScreenTextLine2 = new AccentTypographyBuild(`.slogan__col--2`, 500, `accent-typography--active`, `transform`);
+    const animationTopScreenTextLine3 = new AccentTypographyBuild(`.slogan__col--3`, 500, `accent-typography--active`, `transform`);
+    const introText = new AccentTypographyBuild(`.intro__text`, 500, `accent-typography--active`, `transform`);
+    const showTitle = new AccentTypographyBuild(`.show__title`, 500, `accent-typography--active`, `transform`);
+    const showText = new AccentTypographyBuild(`.show__text`, 500, `accent-typography--active`, `transform`);
+    const showText2 = new AccentTypographyBuild(`.show__text-2`, 500, `accent-typography--active`, `transform`);
+    const sliderTitle = new AccentTypographyBuild(`.slider__title`, 500, `accent-typography--active`, `transform`);
+    const mapTitle = new AccentTypographyBuild(`.map__title`, 500, `accent-typography--active`, `transform`);
+    const ticketsBlockTitle = new AccentTypographyBuild(`.tickets-block__title`, 500, `accent-typography--active`, `transform`);
+
+
     this.colorScheme = {
       tickets: {
         'body': `last-section`
@@ -19,9 +33,60 @@ export default class PageSwitchHandler {
       }
     };
 
-    this.scriptRunSchema = {};
+    this.scriptRunSchema = {
+      top: [
+        introText.runAnimation.bind(introText),
+      ],
+      about: [
+        animationTopScreenTextLine1.runAnimation.bind(animationTopScreenTextLine1),
+        animationTopScreenTextLine2.runAnimation.bind(animationTopScreenTextLine2),
+        animationTopScreenTextLine3.runAnimation.bind(animationTopScreenTextLine3),
+      ],
+      show: [
+        showTitle.runAnimation.bind(showTitle),
+        () => {
+          setTimeout(showText.runAnimation.bind(showText), 200);
+          setTimeout(showText.runAnimation.bind(showText2), 200);
+        }
+      ],
+      mc: [
+        sliderTitle.runAnimation.bind(sliderTitle),
+      ],
+      map: [
+        mapTitle.runAnimation.bind(mapTitle),
+      ],
+      tickets: [
+        ticketsBlockTitle.runAnimation.bind(ticketsBlockTitle)
+      ]
+    };
 
-    this.scriptDestroySchema = {};
+    this.scriptDestroySchema = {
+      top: [
+        introText.destroyAnimation.bind(introText),
+      ],
+      about: [
+        animationTopScreenTextLine1.destroyAnimation.bind(animationTopScreenTextLine1),
+        animationTopScreenTextLine2.destroyAnimation.bind(animationTopScreenTextLine2),
+        animationTopScreenTextLine3.destroyAnimation.bind(animationTopScreenTextLine3),
+      ],
+      show: [
+        showTitle.destroyAnimation.bind(showTitle),
+        showText.destroyAnimation.bind(showText),
+        showText.destroyAnimation.bind(showText2),
+      ],
+      mc: [
+        sliderTitle.destroyAnimation.bind(sliderTitle),
+      ],
+      map: [
+        mapTitle.destroyAnimation.bind(mapTitle),
+      ],
+      tickets: [
+        ticketsBlockTitle.destroyAnimation.bind(ticketsBlockTitle),
+      ]
+    };
+
+    this.setMasterClassAccentTypography();
+    this.setTicketAccentTypography();
   }
 
 
@@ -68,5 +133,34 @@ export default class PageSwitchHandler {
         this.scriptDestroySchema[destroySchema].forEach((funct) => funct());
       }
     }
+  }
+
+
+  setMasterClassAccentTypography() {
+    document.querySelectorAll(`.slider__subtitle`).forEach((title) => {
+      const text = new AccentTypographyBuild(title, 500, `accent-typography--active`, `transform`);
+
+      document.body.addEventListener(`screenChanged`, () => {
+        text.destroyAnimation();
+        setTimeout(() => {
+          text.runAnimation();
+        }, 500);
+      });
+    });
+  }
+
+
+  setTicketAccentTypography() {
+    document.querySelectorAll(`.tickets-form__row .tickets-form__label span:not(.js-total):nth-child(1)`).forEach((title) => {
+      const text = new AccentTypographyBuild(title, 500, `accent-typography--active`, `transform`, 100);
+
+      document.body.addEventListener(`screenChanged`, () => {
+        text.destroyAnimation();
+
+        setTimeout(() => {
+          text.runAnimation();
+        }, 500);
+      });
+    });
   }
 }

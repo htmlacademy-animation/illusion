@@ -250,6 +250,106 @@
 }
 
 
+.map__decor {
+  .bird {
+    animation: fly-part-x-1 38s ease-in-out infinite both;
+
+    &-wrap {
+      animation: fly-part-y-1 12s ease-in-out infinite both;
+    }
+
+    &,
+    &-wrap {
+      animation-play-state: paused;
+
+      .screen.active & {
+        animation-play-state: running;
+      }
+    }
+
+    &.bird-1-right,
+    &.bird-4-left,
+    &.bird-3 {
+      animation-name: fly-part-x-2;
+    }
+
+    &.bird-1-right,
+    &.bird-4-right,
+    &.bird-2 {
+      .bird-wrap {
+        animation-name: fly-part-y-2;
+      }
+    }
+
+    &.bird-1-left {
+      &,
+      .bird-wrap {
+        animation-delay: -3s;
+      }
+    }
+
+    &.bird-1-right {
+      animation-duration: 34s;
+      animation-delay: -11s;
+
+      .bird-wrap {
+        animation-duration: 30s;
+        animation-delay: -10s;
+      }
+    }
+
+    &.bird-2 {
+      animation-duration: 31s;
+
+      .bird-wrap {
+        animation-duration: 16s;
+      }
+
+      &,
+      .bird-wrap {
+        animation-delay: -8s;
+      }
+    }
+
+    &.bird-3 {
+        animation-duration: 27s;
+        animation-delay: -3s;
+
+      .bird-wrap {
+        animation-duration: 39s;
+        animation-delay: -27s;
+      }
+    }
+
+    &.bird-4-left {
+      animation-duration: 67s;
+
+      .bird-wrap {
+        animation-duration: 26s;
+      }
+
+      &,
+      .bird-wrap {
+        animation-delay: -21s;
+      }
+    }
+
+    &.bird-4-right {
+      animation-duration: 46s;
+
+      .bird-wrap {
+        animation-duration: 9s;
+      }
+
+      &,
+      .bird-wrap {
+        animation-delay: -11s;
+      }
+    }
+  }
+}
+
+
 .screen {
   transition: opacity 0.7s ease;
 }
@@ -319,13 +419,83 @@
     transition-timing-function: cubic-bezier(1, 0, 1, 0.62);
   }
 
+  .slider__list span {
+    animation-duration: 0.75s;
+    animation-delay: 0.35s;
+    animation-timing-function: cubic-bezier(0.37, 0, 0.13, 1);
+    animation-fill-mode: both;
+    animation-play-state: paused;
+  }
+
   &.active {
     .swiper-slide {
       transition: opacity 0.15s ease;
     }
 
+    .swiper-slide-active {
+      .whiff {
+        opacity: 1;
+        animation-name: show-whiff;
+        animation-duration: 1.5s;
+        animation-delay: 0.15s;
+        animation-iteration-count: 1;
+        animation-timing-function: cubic-bezier(0, 0, 0, 1);
+        animation-fill-mode: forwards;
+      }
+    }
+
     .swiper-slide:not(.swiper-slide-active) {
       opacity: 0;
+    }
+
+    @for $i from 1 through 5 {
+      .slider__list li:nth-child(#{$i}) .whiff {
+        animation-delay: (0.15s + 0.2s * $i);
+      }
+    }
+
+    .slider__list li:nth-child(n+5) .whiff {
+      animation-delay: (0.15s + 0.2s * 5);
+    }
+
+    .swiper-slide-active .slider__list span {
+      animation-play-state: running;
+      animation-name: slider__show-paragraph;
+    }
+
+    @for $i from 1 through 5 {
+      .slider__list li:nth-child(#{$i}) span {
+        animation-delay: (0.35s + 0.2s * $i);
+      }
+    }
+
+    .slider__list li:nth-child(n+5) span {
+      animation-delay: (0.35s + 0.2s * 5);
+    }
+
+    @media (max-width: $tablet) and (orientation: portrait) {
+      .slider__list li::before {
+        animation-duration: 0.75s;
+        animation-delay: 0.35s;
+        animation-timing-function: cubic-bezier(0.37, 0, 0.13, 1);
+        animation-fill-mode: both;
+        animation-play-state: paused;
+      }
+
+      .swiper-slide-active .slider__list li::before {
+        animation-play-state: running;
+        animation-name: slider__show-line;
+      }
+
+      @for $i from 1 through 5 {
+        .slider__list li:nth-child(#{$i})::before {
+          animation-delay: (0.35s + 0.2s * $i);
+        }
+      }
+
+      .slider__list li:nth-child(n+5)::before {
+        animation-delay: (0.35s + 0.2s * 5);
+      }
     }
   }
 }
@@ -334,6 +504,31 @@
 .swiper-slide {
   .slogan__word span {
     transition: none;
+  }
+}
+
+
+.tickets-form__ticket {
+  &.animate {
+    animation-name: tickets-form__show-ticket;
+    animation-duration: 0.7s;
+    animation-timing-function: ease;
+
+    .tickets-form__ticket {
+      &_x {
+        animation-name: tickets-form__move-ticket-x;
+        animation-duration: 0.7s;
+        animation-timing-function: cubic-bezier(.23,0,.33,1);
+        animation-fill-mode: forwards;
+      }
+
+      &_y {
+        animation-name: tickets-form__move-ticket-y;
+        animation-duration: 0.7s;
+        animation-timing-function: cubic-bezier(.59,0,.73,1);
+        animation-fill-mode: forwards;
+      }
+    }
   }
 }
 

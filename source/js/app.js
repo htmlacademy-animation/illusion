@@ -2,6 +2,7 @@ import 'picturefill/dist/picturefill.min';
 
 import {Menu, Slider, ModalTriggers, TicketsSlider} from './modules/page-parts';
 import FullPageScroll  from './modules/full-page-scroll';
+import AnimatedCart    from './modules/animated-cart';
 
 
 class App {
@@ -12,6 +13,15 @@ class App {
     this.ticketsSlider = new TicketsSlider();
 
     this.fullPageScroll = new FullPageScroll(this);
+
+    this.cart = new AnimatedCart({
+      cart:             `.page-header__cart`,
+      currentContainer: `.swiper-slide-active`,
+      ticketsBlock:     `.tickets-block`,
+      ticket:           `.tickets-form__ticket`,
+      form:             `.tickets-block__form`,
+      number:           `.page-header__cart-number`
+    });
   }
 }
 

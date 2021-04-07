@@ -1,0 +1,162 @@
+@keyframes slider__show-paragraph {
+  0% {
+    transform: translateX(6em);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes slider__show-line {
+  0% {
+    transform: translateX(1em);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes tickets-form__show-ticket {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  96% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@keyframes tickets-form__move-ticket-x {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(var(--cartDeltaX));
+  }
+}
+
+
+@keyframes tickets-form__move-ticket-y {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(var(--cartDeltaY));
+  }
+}
+
+@keyframes fly-part-y-1 {
+    0% {
+        transform: translate(-5%, 40%);
+    }
+
+    22% {
+        transform: translate(2%, -100%);
+    }
+
+    56% {
+        transform: translate(4%, 50%);
+    }
+
+    80% {
+        transform: translate(-2%, -75%);
+    }
+
+    100% {
+        transform: translate(-5%, 40%);
+    }
+}
+
+@keyframes fly-part-y-2 {
+    0% {
+        transform: translate(-6%, 80%);
+    }
+
+    14% {
+        transform: translate(2%, -35%);
+    }
+
+    32% {
+        transform: translate(4%, 50%);
+    }
+
+    45% {
+        transform: translate(-2%, -75%);
+    }
+
+    62% {
+        transform: translate(-5%, 40%);
+    }
+
+    83% {
+        transform: translate(3%, -35%);
+    }
+
+    100% {
+        transform: translate(-6%, 80%);
+    }
+}
+
+@keyframes fly-part-x-1 {
+    0% {
+        transform: translate(-205%, 5%);
+    }
+
+    22% {
+        transform: translate(300%, 2%);
+    }
+
+    56% {
+        transform: translate(-154%, 4%);
+    }
+
+    80% {
+        transform: translate(180%, -2%);
+    }
+
+    100% {
+        transform: translate(-205%, -5%);
+    }
+}
+
+@keyframes fly-part-x-2 {
+    0% {
+        transform: translate(155%, 5%);
+    }
+
+    22% {
+        transform: translate(-80%, 2%);
+    }
+
+    56% {
+        transform: translate(104%, 4%);
+    }
+
+    80% {
+        transform: translate(-105%, -2%);
+    }
+
+    100% {
+        transform: translate(155%, -5%);
+    }
+}
+
